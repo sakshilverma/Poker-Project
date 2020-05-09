@@ -1,5 +1,6 @@
 
 int printTriangle(int size) {
+  int starCount,i,j;
   //start with starCount being 0
   starCount=0;
   //count from 0 (inclusive) to size (exclusive), for each number i that you count
