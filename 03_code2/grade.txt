@@ -1,0 +1,23 @@
+Grading at Sat May  9 08:16:09 UTC 2020
+Checking code2.c for legal syntax
+temp.c: In function ‘printTriangle’:
+temp.c:6:3: error: ‘starCount’ undeclared (first use in this function)
+   starCount=0;
+   ^
+temp.c:6:3: note: each undeclared identifier is reported only once for each function it appears in
+temp.c:8:7: error: ‘i’ undeclared (first use in this function)
+   for(i=0;i<size;i++)
+       ^
+temp.c:11:11: error: ‘j’ undeclared (first use in this function)
+       for(j=0;j<=i;j++)
+           ^
+temp.c:17:4: error: ‘starcount’ undeclared (first use in this function)
+    starcount++;
+    ^
+temp.c:26:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+The code did not have legal syntax!
+
+Overall Grade: F
