@@ -52,30 +52,36 @@ int h=max(size1, y_offset+size2);
       //    ((y is between y_offset and y_offset + size2) AND
       //x is equal to either x_offset OR x_offset + size2 -1)
        
-	 if(x>=x_offset && x<x_offset+size2)
-	 {if(y==y_offset || y==y_offset+size2-1)
-	     printf("*");
-	   continue;}
-       else if(y>=y_offset && y<y_offset+size2)
-	 {if(x==x_offset || x==x_offset+size2-1)
+       if(x>=x_offset && x<(x_offset+size2))
+	 if(y==y_offset || y==(y_offset+size2-1))
+	   {    printf("*");
+	     continue;}
+       
+       if(y>=y_offset && y<(y_offset+size2))
+	 if(x==x_offset || x==(x_offset+size2-1))
 	 // if so, print a *
-	     printf("*");
-	  continue;}
+	   {   printf("*");
+	   continue;}
+       
           //if not,
          // check if EITHER
  //    x is less than size1 AND (y is either 0 or size1-1)
       // OR
 //    y is less than size1 AND (x is either 0 or size1-1)
        
-       else if(x<size1)
-	 {if(y==0 || y==size1-1)
-	     printf("#");
-	   continue;	   }
-	  else if(y<size1)
-	    {if(x==0 || x==size1-1)
+        if(x<size1)
+	  if(y==0 || y==(size1-1))
+	    {printf("#");
+	    continue;	   }
+	
+	   if(y<size1)
+	     {if(x==0 || x==(size1-1))
 	 //if so, print a #
-		printf("#");
-	      continue;}
+		 {printf("#");
+		    continue;
+		 }
+	       else printf(" ");
+	     }
       //else print a space
 	      else printf(" ");
        //when you finish counting x from 0 to w,
