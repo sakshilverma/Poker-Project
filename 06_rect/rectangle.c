@@ -28,18 +28,23 @@ typedef struct rect rectangle;
 rectangle canonicalize(rectangle r) {
   //WRITE THIS FUNCTION
   if(r.width<0)
-    r.width=-1*r.width;
+    {    r.width=-1*r.width;
+      r.x=r.x-r.width;
+    }
   if(r.height<0)
-    r.height=-1*r.height;
+    {r.height=-1*r.height;
+      r.y=r.y-r.height;
+    }
   return r;
 }
 rectangle intersection(rectangle r1, rectangle r2) {
   //WRITE THIS FUNCTION
+  rectangle ans;
   r1.x = max(r1.x, r2.x);
   r1.y = max(r1.y, r2.y);
 r1.width = min(r1.width, r2.width);
    r1.height = min(r1.height, r2.height);
-  return r1;
+  return ans;
 }
 
 //You should not need to modify any code below this line
@@ -49,8 +54,7 @@ void printRectangle(rectangle r) {
     printf("<empty>\n");
   }
   else {
-    printf("(%d,%d) to (%d,%d)\n", r.x, r.y, 
-	                            r.width, r.height);
+    printf("(%d,%d) to (%d,%d)\n", r.x, r.y, r.x + r.width, r.y + r.height);
   }
 }
 
