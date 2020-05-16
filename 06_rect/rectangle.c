@@ -40,10 +40,10 @@ rectangle canonicalize(rectangle r) {
 rectangle intersection(rectangle r1, rectangle r2) {
   //WRITE THIS FUNCTION
   rectangle ans;
-  r1.x = max(r1.x, r2.x);
-  r1.y = max(r1.y, r2.y);
-r1.width = min(r1.width, r2.width);
-   r1.height = min(r1.height, r2.height);
+  ans.x = max(r1.x, r2.x);
+  ans.y = max(r1.y, r2.y);
+ans.width = min(r1.width, r2.width);
+  ans.height = min(r1.height, r2.height);
   return ans;
 }
 
