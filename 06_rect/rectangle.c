@@ -54,7 +54,7 @@ void printRectangle(rectangle r) {
     printf("<empty>\n");
   }
   else {
-    printf("(%d,%d) to (%d,%d)\n", r.x, r.y,  r.width, r.height);
+    printf("(%d,%d) to (%d,%d)\n", r.x, r.y, r.width, r.height);
   }
 }
 
