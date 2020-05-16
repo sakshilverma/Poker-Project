@@ -12,7 +12,7 @@ int max(int a, int b) {
   if (a > b) {
     return a;
   }
-  else  return b;
+  else return b;
 }
 
 //Declare your rectangle structure here!
@@ -54,7 +54,7 @@ void printRectangle(rectangle r) {
     printf("<empty>\n");
   }
   else {
-    printf("(%d,%d) to (%d,%d)\n", r.x, r.y, r.width, r.height);
+    printf("(%d,%d) to (%d,%d)\n", r.x, r.y, r.x + r.width, r.y + r.height);
   }
 }
 
@@ -93,74 +93,88 @@ int main (void) {
   printRectangle(r4);
 
   //test everything with r1
+  { r1=canonicalize(r1);
+    r1.width=r1.x + r1.width;
+    r1.height=r1.y + r1.height;
+    r2=canonicalize(r2);
+    r2.width=r2.x + r2.width;
+    r2.height=r2.y + r2.height;
+
+    r3=canonicalize(r3);
+    r3.width=r3.x + r3.width;
+    r3.height=r3.y + r3.height;
+    r4=canonicalize(r4);
+    r4.width=r4.x + r4.width;
+    r4.height=r4.y + r4.height;
+
   rectangle i = intersection(r1,r1);
   printf("intersection(r1,r1): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r1,r2);
   printf("intersection(r1,r2): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
   
   i = intersection(r1,r3);
   printf("intersection(r1,r3): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r1,r4);
   printf("intersection(r1,r4): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   //test everything with r2
   i = intersection(r2,r1);
   printf("intersection(r2,r1): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r2,r2);
   printf("intersection(r2,r2): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
   
   i = intersection(r2,r3);
   printf("intersection(r2,r3): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r2,r4);
   printf("intersection(r2,r4): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   //test everything with r3
   i = intersection(r3,r1);
   printf("intersection(r3,r1): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r3,r2);
   printf("intersection(r3,r2): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
   
   i = intersection(r3,r3);
   printf("intersection(r3,r3): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r3,r4);
   printf("intersection(r3,r4): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   //test everything with r4
   i = intersection(r4,r1);
   printf("intersection(r4,r1): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r4,r2);
   printf("intersection(r4,r2): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
   
   i = intersection(r4,r3);
   printf("intersection(r4,r3): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
   i = intersection(r4,r4);
   printf("intersection(r4,r4): ");
-  printRectangle(i);
+  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
-
+  }
   return EXIT_SUCCESS;
 
 }
