@@ -42,8 +42,8 @@ rectangle intersection(rectangle r1, rectangle r2) {
   rectangle ans;
   ans.x = max(r1.x, r2.x);
   ans.y = max(r1.y, r2.y);
-ans.width = min(r1.width, r2.width);
-  ans.height = min(r1.height, r2.height);
+ans.width = min(r1.width+r1.x, r2.width+r2.x);
+  ans.height = min(r1.height+r1.y, r2.height+r2.y);
   return ans;
 }
 
