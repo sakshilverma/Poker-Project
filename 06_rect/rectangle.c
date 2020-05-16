@@ -212,7 +212,8 @@ int main (void) {
   
   i = intersection(r3,r4);
   printf("intersection(r3,r4): ");
-    printf("<empty>\n");
+    printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+
   
 
   
@@ -238,12 +239,12 @@ int main (void) {
   
   i = intersection(r4,r3);
   printf("intersection(r4,r3): ");
-   printf("<empty>\n");
+    printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
   
   
   i = intersection(r4,r4);
   printf("intersection(r4,r4): ");
-  printf("<empty>\n");
+   printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
   }
   return EXIT_SUCCESS;
 
