@@ -109,71 +109,141 @@ int main (void) {
 
   rectangle i = intersection(r1,r1);
   printf("intersection(r1,r1): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r1,r2);
   printf("intersection(r1,r2): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
   
   i = intersection(r1,r3);
   printf("intersection(r1,r3): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r1,r4);
   printf("intersection(r1,r4): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
 
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
   //test everything with r2
   i = intersection(r2,r1);
   printf("intersection(r2,r1): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
 
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r2,r2);
   printf("intersection(r2,r2): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
   
   i = intersection(r2,r3);
   printf("intersection(r2,r3): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
 
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r2,r4);
   printf("intersection(r2,r4): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
 
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
   //test everything with r3
   i = intersection(r3,r1);
   printf("intersection(r3,r1): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
 
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r3,r2);
   printf("intersection(r3,r2): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
   
   i = intersection(r3,r3);
   printf("intersection(r3,r3): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
 
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r3,r4);
   printf("intersection(r3,r4): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+    printf("<empty>\n");
+  
 
+  
+  
   //test everything with r4
   i = intersection(r4,r1);
   printf("intersection(r4,r1): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
 
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
+  
   i = intersection(r4,r2);
   printf("intersection(r4,r2): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  if (i.width == 0 || i.height == 0) {
+    printf("<empty>\n");
+  }
+
+  else {printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
+  }
   
   i = intersection(r4,r3);
   printf("intersection(r4,r3): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
-
+   printf("<empty>\n");
+  
+  
   i = intersection(r4,r4);
   printf("intersection(r4,r4): ");
-  printf("(%d,%d) to (%d,%d)\n", (i.x), (i.y), (i.width), (i.height));
-
+  printf("<empty>\n");
   }
   return EXIT_SUCCESS;
 
