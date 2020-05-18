@@ -1,0 +1,346 @@
+Grading at Mon May 18 14:18:35 UTC 2020
+Attempting to compile retirement.c
+Checking for struct _retire_info
+Found on line 4, column 1 
+Checking for field int months
+Found on line 5, column 3 
+Checking for field double contribution
+Found on line 6, column 3 
+Checking for field double rate_of_return
+Found on line 7, column 3 
+Checking for typedef of struct _retire_info to retire_info
+Found on line 10, column 1 
+Checking for void retirement (int startAge, double initial,  retire_info working,  retire_info retired)
+Found on line 21, column 1 
+Checking for int main(void)
+Found on line 28, column 1 
+Trying to run retirement calculator..
+Line_2_did_not_match
+Line_3_did_not_match
+Line_4_did_not_match
+Line_5_did_not_match
+Line_6_did_not_match
+Line_7_did_not_match
+Line_8_did_not_match
+Line_9_did_not_match
+Line_10_did_not_match
+Line_11_did_not_match
+Line_12_did_not_match
+Line_13_did_not_match
+Line_14_did_not_match
+Line_15_did_not_match
+Line_16_did_not_match
+Line_17_did_not_match
+Line_18_did_not_match
+Line_19_did_not_match
+Line_20_did_not_match
+Line_21_did_not_match
+Line_22_did_not_match
+Line_23_did_not_match
+Line_24_did_not_match
+Line_25_did_not_match
+Line_26_did_not_match
+Line_27_did_not_match
+Line_28_did_not_match
+Line_29_did_not_match
+Line_30_did_not_match
+Line_31_did_not_match
+Line_32_did_not_match
+Line_33_did_not_match
+Line_34_did_not_match
+Line_35_did_not_match
+Line_36_did_not_match
+Line_37_did_not_match
+Line_38_did_not_match
+Line_39_did_not_match
+Line_40_did_not_match
+Line_41_did_not_match
+Line_42_did_not_match
+Line_43_did_not_match
+Line_44_did_not_match
+Line_45_did_not_match
+Line_46_did_not_match
+Line_47_did_not_match
+Line_48_did_not_match
+Line_49_did_not_match
+Line_50_did_not_match
+Line_51_did_not_match
+Line_52_did_not_match
+Line_53_did_not_match
+Line_54_did_not_match
+Line_55_did_not_match
+Line_56_did_not_match
+Line_57_did_not_match
+Line_58_did_not_match
+Line_59_did_not_match
+Line_60_did_not_match
+Line_61_did_not_match
+Line_62_did_not_match
+Line_63_did_not_match
+Line_64_did_not_match
+Line_65_did_not_match
+Line_66_did_not_match
+Line_67_did_not_match
+Line_68_did_not_match
+Line_69_did_not_match
+Line_70_did_not_match
+Line_71_did_not_match
+Line_72_did_not_match
+Line_73_did_not_match
+Line_74_did_not_match
+Line_75_did_not_match
+Line_76_did_not_match
+Line_77_did_not_match
+Line_78_did_not_match
+Line_79_did_not_match
+Line_80_did_not_match
+Line_81_did_not_match
+Line_82_did_not_match
+Line_83_did_not_match
+Line_84_did_not_match
+Line_85_did_not_match
+Line_86_did_not_match
+Line_87_did_not_match
+Line_88_did_not_match
+Line_89_did_not_match
+Line_90_did_not_match
+Line_91_did_not_match
+Line_92_did_not_match
+Line_93_did_not_match
+Line_94_did_not_match
+Line_95_did_not_match
+Line_96_did_not_match
+Line_97_did_not_match
+Line_98_did_not_match
+Line_99_did_not_match
+Line_100_did_not_match
+Line_101_did_not_match
+Line_102_did_not_match
+Line_103_did_not_match
+Line_104_did_not_match
+Line_105_did_not_match
+Line_106_did_not_match
+Line_107_did_not_match
+Line_108_did_not_match
+Line_109_did_not_match
+Line_110_did_not_match
+Line_111_did_not_match
+Line_112_did_not_match
+Line_113_did_not_match
+Line_114_did_not_match
+Line_115_did_not_match
+Line_116_did_not_match
+Line_117_did_not_match
+Line_118_did_not_match
+Line_119_did_not_match
+Line_120_did_not_match
+Line_121_did_not_match
+Line_122_did_not_match
+Line_123_did_not_match
+Line_124_did_not_match
+Line_125_did_not_match
+Line_126_did_not_match
+Line_127_did_not_match
+Line_128_did_not_match
+Line_129_did_not_match
+Line_130_did_not_match
+Line_131_did_not_match
+Line_132_did_not_match
+Line_133_did_not_match
+Line_134_did_not_match
+Line_135_did_not_match
+Line_136_did_not_match
+Line_137_did_not_match
+Line_138_did_not_match
+Line_139_did_not_match
+Line_140_did_not_match
+Line_141_did_not_match
+Line_142_did_not_match
+Line_143_did_not_match
+Line_144_did_not_match
+Line_145_did_not_match
+Line_146_did_not_match
+Line_147_did_not_match
+Line_148_did_not_match
+Line_149_did_not_match
+Line_150_did_not_match
+Line_151_did_not_match
+Line_152_did_not_match
+Line_153_did_not_match
+Line_154_did_not_match
+Line_155_did_not_match
+Line_156_did_not_match
+Line_157_did_not_match
+Line_158_did_not_match
+Line_159_did_not_match
+Line_160_did_not_match
+Line_161_did_not_match
+Line_162_did_not_match
+Line_163_did_not_match
+Your file did not match the expected ouput
+Your output did not match what we expected. Here is what you printed
+Age  27 month  3 you have $21345.00
+Age  27 month  4 you have $31425.04
+Age  27 month  5 you have $41542.89
+Age  27 month  6 you have $51698.67
+Age  27 month  7 you have $61892.54
+Age  27 month  8 you have $72124.64
+Age  27 month  9 you have $82395.11
+Age  27 month 10 you have $92704.09
+Age  27 month 11 you have $103051.73
+Age  28 month  0 you have $113438.17
+Age  28 month  1 you have $123863.57
+Age  28 month  2 you have $134328.06
+Age  28 month  3 you have $144831.79
+Age  28 month  4 you have $155374.90
+Age  28 month  5 you have $165957.56
+Age  28 month  6 you have $176579.90
+Age  28 month  7 you have $187242.08
+Age  28 month  8 you have $197944.23
+Age  28 month  9 you have $208686.52
+Age  28 month 10 you have $219469.10
+Age  28 month 11 you have $230292.11
+Age  29 month  0 you have $241155.70
+Age  29 month  1 you have $252060.04
+Age  29 month  2 you have $263005.26
+Age  29 month  3 you have $273991.53
+Age  29 month  4 you have $285019.00
+Age  29 month  5 you have $296087.82
+Age  29 month  6 you have $307198.15
+Age  29 month  7 you have $318350.14
+Age  29 month  8 you have $329543.96
+Age  29 month  9 you have $340779.75
+Age  29 month 10 you have $352057.67
+Age  29 month 11 you have $363377.89
+Age  30 month  0 you have $374740.55
+Age  30 month  1 you have $386145.83
+Age  30 month  2 you have $397593.88
+Age  30 month  3 you have $409084.86
+Age  30 month  4 you have $420618.92
+Age  30 month  5 you have $432196.25
+Age  30 month  6 you have $443816.98
+Age  30 month  7 you have $455481.29
+Age  30 month  8 you have $467189.35
+Age  30 month  9 you have $478941.31
+Age  30 month 10 you have $490737.34
+Age  30 month 11 you have $502577.60
+Age  31 month  0 you have $514462.27
+Age  31 month  1 you have $526391.50
+Age  31 month  2 you have $538365.47
+Age  31 month  3 you have $550384.34
+Age  31 month  4 you have $562448.28
+Age  31 month  5 you have $574557.47
+Age  31 month  6 you have $586712.06
+Age  31 month  7 you have $598912.23
+Age  31 month  8 you have $611158.15
+Age  31 month  9 you have $623449.99
+Age  31 month 10 you have $635787.93
+Age  31 month 11 you have $648172.13
+Age  32 month  0 you have $660602.78
+Age  32 month  1 you have $673080.04
+Age  32 month  2 you have $685604.09
+Age  32 month  3 you have $698175.10
+Age  32 month  4 you have $710793.26
+Age  32 month  5 you have $723458.73
+Age  32 month  6 you have $736171.70
+Age  32 month  7 you have $748932.35
+Age  32 month  8 you have $761740.85
+Age  32 month  9 you have $774597.37
+Age  32 month 10 you have $787502.11
+Age  32 month 11 you have $800455.25
+Age  33 month  0 you have $813456.95
+Age  33 month  1 you have $826507.42
+Age  33 month  2 you have $839606.82
+Age  33 month  3 you have $852755.35
+Age  33 month  4 you have $865953.18
+Age  33 month  5 you have $879200.50
+Age  33 month  6 you have $892497.50
+Age  33 month  7 you have $905844.37
+Age  33 month  8 you have $919241.29
+Age  33 month  9 you have $932688.44
+Age  33 month 10 you have $946186.02
+Age  33 month 11 you have $959734.22
+Age  34 month  0 you have $973333.22
+Age  34 month  1 you have $986983.22
+Age  34 month  2 you have $1000684.41
+Age  34 month  3 you have $1014436.98
+Age  34 month  4 you have $1028241.12
+Age  34 month  5 you have $1042097.02
+Age  34 month  6 you have $1056004.88
+Age  34 month  7 you have $1069964.90
+Age  34 month  8 you have $1083977.27
+Age  34 month  9 you have $1098042.18
+Age  34 month 10 you have $1112159.84
+Age  34 month 11 you have $1126330.44
+Age  35 month  0 you have $1140554.18
+Age  35 month  1 you have $1154831.26
+Age  35 month  2 you have $1169161.88
+Age  35 month  3 you have $1183546.23
+Age  35 month  4 you have $1197984.53
+Age  35 month  5 you have $1212476.97
+Age  35 month  6 you have $1227023.76
+Age  35 month  7 you have $1241625.10
+Age  35 month  8 you have $1256281.20
+Age  35 month  9 you have $1270992.25
+Age  35 month 10 you have $1285758.47
+Age  35 month 11 you have $1300580.07
+Age  36 month  0 you have $1315457.24
+Age  36 month  1 you have $1330390.21
+Age  36 month  2 you have $1345379.17
+Age  36 month  3 you have $1360424.34
+Age  36 month  4 you have $1375525.93
+Age  36 month  5 you have $1390684.15
+Age  36 month  6 you have $1405899.22
+Age  36 month  7 you have $1421171.34
+Age  36 month  8 you have $1436500.73
+Age  36 month  9 you have $1451887.61
+Age  36 month 10 you have $1467332.19
+Age  36 month 11 you have $1482834.69
+Age  37 month  0 you have $1498395.32
+Age  37 month  1 you have $1514014.30
+Age  37 month  2 you have $1529691.85
+Age  37 month  3 you have $1545428.20
+Age  37 month  4 you have $1561223.55
+Age  37 month  5 you have $1577078.14
+Age  37 month  6 you have $1592992.18
+Age  37 month  7 you have $1608965.91
+Age  37 month  8 you have $1624999.53
+Age  37 month  9 you have $1641093.28
+Age  37 month 10 you have $1657247.38
+Age  37 month 11 you have $1673462.05
+Age  38 month  0 you have $1689737.54
+Age  38 month  1 you have $1706074.05
+Age  38 month  2 you have $1722471.83
+Age  38 month  3 you have $1738931.10
+Age  38 month  4 you have $1755452.09
+Age  38 month  5 you have $1772035.04
+Age  38 month  6 you have $1788680.17
+Age  38 month  7 you have $1805387.72
+Age  38 month  8 you have $1822157.92
+Age  38 month  9 you have $1838991.01
+Age  38 month 10 you have $1855887.23
+Age  38 month 11 you have $1872846.81
+Age  39 month  0 you have $1889869.98
+Age  39 month  1 you have $1906957.00
+Age  39 month  2 you have $1924108.08
+Age  39 month  3 you have $1941323.49
+Age  39 month  4 you have $1958603.45
+Age  39 month  5 you have $1975948.22
+Age  39 month  6 you have $1993358.02
+Age  39 month  7 you have $2010833.11
+Age  39 month  8 you have $2028373.74
+Age  39 month  9 you have $2045980.14
+Age  39 month 10 you have $2063652.56
+Age  39 month 11 you have $2081391.26
+Age  40 month  0 you have $2099196.48
+Age  40 month  1 you have $2117068.47
+Age  40 month  2 you have $2135007.47
+Age  40 month  3 you have $2153013.75
+Age  40 month  4 you have $2171087.55
+Age  40 month  5 you have $2189229.13
+Age  40 month  6 you have $2207438.74
+Age  40 month  7 you have $2225716.64
+Age  40 month  8 you have $2244063.07
+Age  40 month  9 you have $2262478.31
+
+Overall Grade: F
