@@ -98,8 +98,48 @@ card_t card_from_letters(char value_let, char suit_let)
   temp.value=value_let;
   temp.suit=suit_let;
   assert(temp.value && temp.suit);
-  temp.value=value_letter(temp);
- temp.suit=suit_letter(temp);
+  switch(value_let)
+    {
+    case '2': temp.value= 2;
+      break;
+    case '3': temp.value= 3;
+      break;
+    case '4': temp.value= 4;
+      break;
+    case '5': temp.value= 5;
+      break;
+    case '6': temp.value= 6;
+      break;
+    case '7': temp.value= 7;
+      break;
+    case '8': temp.value= 8;
+      break;
+    case '9': temp.value= 9;
+      break;
+    case '0': temp.value= 10;
+      break;
+    case 'J': temp.value= VALUE_JACK;
+      break;
+    case 'Q': temp.value= VALUE_QUEEN;
+      break;
+    case 'K': temp.value= VALUE_KING;
+      break;
+    case 'A': temp.value= VALUE_ACE;
+      break;
+      
+    }
+
+  switch(suit_let)
+    {
+    case 's': temp.suit= 's';
+      break;
+    case 'h': temp.suit= 'h';
+      break;
+    case 'd': temp.suit= 'd';
+      break;
+    case 'c': temp.suit= 'c';
+      break;
+           }
   return temp;
 }
 
