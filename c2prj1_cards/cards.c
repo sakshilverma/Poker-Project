@@ -131,13 +131,13 @@ card_t card_from_letters(char value_let, char suit_let)
 
   switch(suit_let)
     {
-    case 's': temp.suit= 's';
+    case 's': temp.suit=SPADES;
       break;
-    case 'h': temp.suit= 'h';
+    case 'h': temp.suit=HEARTS;
       break;
-    case 'd': temp.suit= 'd';
+    case 'd': temp.suit=DIAMONDS;
       break;
-    case 'c': temp.suit= 'c';
+    case 'c': temp.suit=CLUBS;
       break;
            }
   return temp;
