@@ -98,7 +98,9 @@ card_t card_from_letters(char value_let, char suit_let)
   temp.value=value_let;
   temp.suit=suit_let;
   assert(temp.value && temp.suit);
-   return temp;
+  temp.value=value_letter(temp);
+ temp.suit=suit_letter(temp);
+  return temp;
 }
 
 card_t card_from_num(unsigned c) {
