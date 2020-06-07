@@ -1,4 +1,4 @@
-Grading at Sun Jun  7 06:14:24 UTC 2020
+Grading at Sun Jun  7 10:46:30 UTC 2020
 **Testing broken implementation 10 **
 -------------------------------------
 
@@ -30,6 +30,23 @@ Grading at Sun Jun  7 06:14:24 UTC 2020
 **Testing broken implementation 6 **
 -------------------------------------
 
-Your test program did not identify /usr/local/l2p/subseq/subseq6.o as broken!
 
-Overall Grade: FAILED
+**Testing broken implementation 7 **
+-------------------------------------
+
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+
+**Testing correct implementation **
+-------------------------------------
+
+
+All test programs were handled correctly
+
+Overall Grade: PASSED
