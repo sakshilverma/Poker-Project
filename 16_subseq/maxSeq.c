@@ -5,6 +5,7 @@ size_t maxSeq(int * array, size_t n)
 {int count=1;
   size_t temp=0;
   int i;
+int *array1=&array[0]
   if(n==0)
     {return 0;
     }
@@ -13,10 +14,10 @@ size_t maxSeq(int * array, size_t n)
     }
   else
     { for(i=0;i<n;i++)
-	{  if(array[i+1]>array[i])
+	{  if(array1[i+1]>array1[i])
 	  {count++;
 	  }
-     else if(array[i+1]<=array[i])
+     else if(array1[i+1]<=array1[i])
        { if(count>temp)
 	 {temp=count;
 	  count=1;
