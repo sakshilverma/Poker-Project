@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-size_t maxSeq(int * array, size_t n)
+size_t maxSeq(size_t * array, size_t n)
 {size_t count=1;
   size_t temp=0;
-  int i;
+  size_t i;
   if(n==0)
     {return 0;
     }
