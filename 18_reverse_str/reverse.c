@@ -5,7 +5,7 @@
 void reverse(char * str) {
 
   size_t a=strlen(str);
-  if(str=='NULL')
+  if(str=='\0')
     return;
   char b[a];
   for(size_t i=0;i<a;i++)
