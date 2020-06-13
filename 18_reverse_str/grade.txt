@@ -1,20 +1,13 @@
-Grading at Sat Jun 13 11:22:05 UTC 2020
+Grading at Sat Jun 13 11:28:45 UTC 2020
 Attempting to compile  reverse.c
-Your file matched the expected output
-Your output matched what we expected
-Removing your main() and replacing it with our own to run more tests...
-#################################################
-testcase2:
- - Your program segfaulted.
-your code failed the testcase
-#################################################
-testcase3:
-Your file matched the expected output
-#################################################
-testcase4:
-Your file matched the expected output
-#################################################
-testcase5:
-Your file matched the expected output
+reverse.c: In function ‘reverse’:
+reverse.c:8:11: error: multi-character character constant [-Werror=multichar]
+   if(str=='NULL')
+           ^
+reverse.c:8:9: error: comparison between pointer and integer [-Werror]
+   if(str=='NULL')
+         ^
+cc1: all warnings being treated as errors
+The code did not compile!
 
-Overall Grade: C
+Overall Grade: F
