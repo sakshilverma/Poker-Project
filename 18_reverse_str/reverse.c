@@ -4,10 +4,10 @@
 
 void reverse(char * str) {
 
-  size_t a=strlen(str);
-  if(str=='\0')
+  if(str==NULL)
     return;
-  char b[a];
+ size_t a=strlen(str);
+   char b[a];
   for(size_t i=0;i<a;i++)
     {
       b[i]=*(str+a-1-i);
