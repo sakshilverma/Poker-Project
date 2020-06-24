@@ -4,20 +4,19 @@
 
 unsigned power (unsigned x, unsigned y);
 
-unsigned main()
+void main()
 {
-unsigned x2=0;
- unsigned y2=3;
- unsigned z2=1;
- unsigned x1=65789;
- unsigned y1=1;
- unsigned z1=65789;
+  if(power(0,0) != 1)
+   {exit(EXIT_FAILURE);
+   }
 
- if(power(x2,y2) != z2)
-   exit(EXIT_FAILURE);
+  if(power(25,2) != 625)
+   {exit(EXIT_FAILURE);
+   }
 
-if(power(x1,y1) != z1)
-   exit(EXIT_FAILURE);
+ if(power(121345,1) != 121345)
+   {exit(EXIT_FAILURE);
+   }
 
- exit(EXIT_SUCCESS); 
+ else exit(EXIT_SUCCESS);
 }
