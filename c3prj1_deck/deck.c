@@ -20,20 +20,15 @@ int deck_contains(deck_t * d, card_t c) {
 }
 
 void shuffle(deck_t * d){
-  size_t n = d->n_cards;
-  card_t ** ptc = d->cards;
-  for(int i = n-1; i>0; i--){
-
-    int k = random()%n;
-
-    card_t ** ptc1 = ptc +n -1 -i;
-    card_t ** ptc2 = ptc + k;
-    card_t * temp = *ptc1;
-    *ptc1 = *ptc2;
-    *ptc2 = temp;
+  card_t temp;
+  for(size_t i=0;i<d->n_cards;i++)
+    {
+int y = random()%d->n_cards;
+ temp=*(d->cards[i]);
+ *(d->cards)[i]=*(d->cards)[y];
+ *(d->cards)[y]=temp;
   }
-  
-}
+  }
 
 void assert_full_deck(deck_t * d) {
   for(int i=0;i<d->n_cards;i++)
