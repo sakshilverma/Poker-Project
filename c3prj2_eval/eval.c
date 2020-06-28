@@ -74,24 +74,25 @@ ssize_t  find_secondary_pair(deck_t * hand,
   return -1;
     }
 
-int is_straight_at(deck_t * hand, size_t index, suit_t fs) {
-  if(fs==NUM_SUITS)
-    {for(size_t i=index;i<(index+5);i++)
-	{
-	  if(hand->cards[i]->value==hand->cards[i+1]->value-1)
-	    {return 1;
-	    }
-	  if(hand->cards[index]->value=='A' && hand->cards[i+1]->value==hand->cards[i+2]->value-1)
-	    {if(hand->cards[i+1]->value==5 && hand->cards[i+2]->value==4 && hand->cards[i+3]->value==3 && hand->cards[i+4]->value==2)
-		{return -1;
-		}}}}
-  if(fs != NUM_SUITS)
-    {for(size_t i=index;i<(index+5);i++)
-	{if(hand->cards[i]->value==hand->cards[i+1]->value-1 && hand->cards[i]->suit==hand->cards[i+1]->suit)
-	    {return 1;
-	    }
-	}
-    }
+int is_straight_at(deck_t * hand, size_t index, suit_t fs)
+{if(fs==NUM_SUITS)
+  {for(size_t i=index;i<(index+5);i++)
+      {
+	if(hand->cards[i]->value==hand->cards[i+1]->value-1)
+	  {return 1;
+	  }
+	if(hand->cards[index]->value=='A' && hand->cards[i+1]->value==hand->cards[i+2]->value-1)
+	  {if(hand->cards[i+1]->value==2 && hand->cards[i+2]->value==3 && hand->cards[i+3]->value==4 && hand->cards[i+4]->value==5)
+	      {return -1;
+	      }}}}
+if(fs != NUM_SUITS)
+  {for(size_t i=index;i<(index+5);i++)
+      {if(hand->cards[i]->value==hand->cards[i+1]->value-1 && hand->cards[i]->suit==hand->cards[i+1]->suit)
+	  {return 1;
+	  }
+      }
+    return 0;
+  }
 return 0;
 }
 
