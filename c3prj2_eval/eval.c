@@ -53,58 +53,35 @@ unsigned get_largest_element(unsigned * arr, size_t n) {
   return max;
 }
 
-size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
-  for(size_t i=0;i<n;i++)
-    { if(match_counts[i]==n_of_akind)
-	return i;
-    }
-return -1;
-}
-ssize_t  find_secondary_pair(deck_t * hand,
-			     unsigned * match_counts,
-			     size_t match_idx) {
-  card_t **v=hand->cards;
-  for(size_t i=0;i<hand->n_cards;i++)
-    { if(v[i]->value != v[match_idx]->value)
-	{
-	  if(v[i]->value==v[i+1]->value)
-	    return i;
-	}
-    }
-  return -1;
     }
 
 int is_straight_at(deck_t * hand, size_t index, suit_t fs)
 {if(fs==NUM_SUITS)
-  {for(size_t i=index;i<(index+5);i++)
+ 
       {
-	if(hand->cards[i]->value==hand->cards[i+1]->value-1)
+	if(hand->cards[index]->value==(hand->cards[index]->value)-1)
 	  {return 1;
 	  }
-	if(hand->cards[index]->value=='A' && hand->cards[i+1]->value==hand->cards[i+2]->value-1)
-	  {if(hand->cards[i+1]->value==2 && hand->cards[i+2]->value==3 && hand->cards[i+3]->value==4 && hand->cards[i+4]->value==5)
+	if(hand->cards[index]->value=='A' && hand->cards[index+1]->value==(hand->cards[index+2]->value)-1)
+	  {if(hand->cards[index+1]->value==2 && hand->cards[index+2]->value==3 && hand->cards[index+3]->value==4 && hand->cards[index+4]->value==5)
 	      {return -1;
-	      }}}}
+	      }}}
 if(fs != NUM_SUITS)
-  {for(size_t i=index;i<(index+5);i++)
-      {if(hand->cards[i]->value==hand->cards[i+1]->value-1 && hand->cards[i]->suit==hand->cards[i+1]->suit)
+   {if(hand->cards[index]->value==(hand->cards[index+1]->value)-1 && hand->cards[index]->suit==hand->cards[index+1]->suit)
 	  {return 1;
 	  }
       }
     return 0;
   }
-return 0;
-}
 
 hand_eval_t build_hand_from_match(deck_t * hand,
 				  unsigned n,
 				  hand_ranking_t what,
-				  size_t idx) {
-
-  hand_eval_t ans;
-  ans.ranking=what;
+				  size_t idx)
+{hand_eval_t *ans;
+  ans->ranking=what;
   for(size_t i=0;i<n;i++)
-    {ans.cards[i]=hand->cards[idx];
+    {ans->cards[i]=hand->cards[idx];
       idx++;
     }
    size_t j=0;
@@ -113,10 +90,10 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 	{j=j+n;
 	}
      
-      ans.cards[i]=hand->cards[j];
+      ans->cards[i]=hand->cards[j];
       j++;
     }
-  return ans;
+  return *ans;
 }
 
 
