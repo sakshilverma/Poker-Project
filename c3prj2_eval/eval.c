@@ -72,33 +72,40 @@ ssize_t  find_secondary_pair(deck_t * hand,
    
 
 
-int is_n_length_straight_at(deck_t * hand, size_t i, suit_t fs)
+int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs)
 {if(fs==NUM_SUITS)
-    {if(hand->cards[i]->value==5)
+    {for(size_t i=index;i<hand->n_cards -5;i++)
+	{	
+      if(hand->cards[i]->value==5)
         {if(hand->cards[i+1]->value == ((hand->cards[i+2]->value)-1))
 	    {return 1;
 	      }
 	    }
-	     return 0;
+	}
+      return 0;
 	}
      return 0;
 }
 
 
-int is_straight_at(deck_t * hand, size_t i, suit_t fs){
+int is_straight_at(deck_t * hand, size_t index, suit_t fs){
   if(fs==NUM_SUITS)
-    { if(hand->cards[i]->value==(hand->cards[i+1]->value)-1)
+    { for(size_t i=index;i<hand->n_cards -5;i++)
+	{	
+      if(hand->cards[i]->value==(hand->cards[i+1]->value)-1)
 	{return 1;
 	  }
-	
-      if(hand->cards[0]->value=='A' && is_n_length_straight_at(hand, i, fs)==1)
+	}
+      if(hand->cards[0]->value=='A' && is_n_length_straight_at(hand, index, fs)==1)
 	      {return -1;
 	      }}
   
 if(fs != NUM_SUITS)
-  { if(hand->cards[i]->value==((hand->cards[i+1]->value)-1) && hand->cards[i]->suit==hand->cards[i+1]->suit)
+  {      for(size_t i=index;i<hand->n_cards -5;i++)
+      {
+    if(hand->cards[i]->value==((hand->cards[i+1]->value)-1) && hand->cards[i]->suit==hand->cards[i+1]->suit)
     {return 1;
-     }
+    }}
   }
 return 0;
 }
