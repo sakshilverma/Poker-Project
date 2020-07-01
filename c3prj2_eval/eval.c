@@ -135,13 +135,13 @@ qsort(hand2->cards,hand2->n_cards,sizeof(hand2->cards[0]),card_ptr_comp);
 hand_eval_t hand4=evaluate_hand(hand2);
   
   if(hand3.ranking != hand4.ranking)
-    {return (hand3.ranking - hand4.ranking);
+    {return (hand4.ranking - hand3.ranking);
     }
 
   else if(hand3.ranking == hand4.ranking)
     {for(size_t i=0;i<5;i++)
 	{if(hand3.cards[i]->value != hand4.cards[i]->value)
-	  {return (hand3.cards[i]->value - hand4.cards[i]->value);
+	  {return (hand4.cards[i]->value - hand3.cards[i]->value);
 	  }
     }
       return 0;
