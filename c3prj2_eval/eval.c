@@ -96,9 +96,11 @@ int is_straight_at(deck_t * hand, size_t index, suit_t fs){
 	{return 1;
 	  }
 	}
-      if(hand->cards[0]->value=='A' && is_n_length_straight_at(hand, index, fs)==1)
+       if(hand->cards[0]->value=='A' && is_n_length_straight_at(hand, index, fs)==1)
 	      {return -1;
-	      }}
+	      }
+     return 0;
+    }
   
 if(fs != NUM_SUITS)
   {      for(size_t i=index;i<index+4;i++)
