@@ -164,7 +164,7 @@ qsort(hand2->cards,hand2->n_cards,sizeof(hand2->cards[0]),card_ptr_comp);
 hand_eval_t hand4=evaluate_hand(hand2);
   
   if(hand3.ranking != hand4.ranking)
-    {return (hand3.ranking - hand4.ranking);
+    {return (hand4.ranking - hand3.ranking);
     }
 
   else if(hand3.ranking == hand4.ranking)
