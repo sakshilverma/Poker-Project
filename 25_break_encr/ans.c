@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<ctype.h>
 
-int freq(char a[])
+int freq(char *a)
 {int count=1;
   int countmax=1;
   char max=a[0];
@@ -41,7 +41,7 @@ int main(int argc, char ** argv)
 
   FILE *f=fopen(argv[1], "r");
   if(f==NULL)
-    {perror("Could not open the file\n");
+    {fprintf(stderr,"Could not open the file\n");
       return EXIT_FAILURE;
     }
 
@@ -53,12 +53,15 @@ int main(int argc, char ** argv)
  int k=freq(a);
 
  if(k>=0 && k<26)
-   {fprintf(stdout,"%d\n",k);
+   {printf("%d\n",k);
    }
- else if(k<0 && k>=26)
+ if(k<0 && k>=26)
    { fprintf(stderr,"Key not in range\n");
    return EXIT_FAILURE;
  }
- 
+ if(fclose(f) != 0) {
+   fprintf(stderr,"Failed to close the input file!\n");
+   return EXIT_FAILURE;
+ }  
  return EXIT_SUCCESS;
 }
