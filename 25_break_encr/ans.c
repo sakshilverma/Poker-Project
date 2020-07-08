@@ -1,60 +1,69 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
 
-
-size_t largestindx(int * array, size_t n){
-
-  size_t indx=0;
-
-  for (int i=1;i<n;i++){
-    if (array[indx] < array[i]){
-      indx = i;
+int freq(char *a)
+{int count=1;
+  int countmax=1;
+  char max=a[0];
+  for(int i=0;i<7000;i++)
+    {count=1;
+      for(int j=i+1;j<7000;j++)
+	{if(isalpha(a[i]) && isalpha(a[j]))
+	    {if(a[i]==a[j])
+		{count++;
+		  if(count>countmax)
+		    {countmax=count;
+		      max=a[i];
+		    }
+		}
+	    }}
     }
-  }
-  return indx;
+  int m = max - 'e';
+  if(m<0)
+    {if(m==-4)
+	{m=22;}
+      else if(m==-3)
+	{m=23;}
+      else if(m==-2)
+	{m=24;}
+      else if(m==-1)
+	{m=25;}
+    }
+  return m;
 }
 
-
-int main(int argc, char ** argv) {
-
-
-  if (argc != 2) {
-    fprintf(stderr,"Invalid argc\n");
-    return EXIT_FAILURE;
-  }
-
-  FILE * f = fopen(argv[1], "r");
-
-  if (f == NULL) {
-    fprintf(stderr,"Could not open file\n");
-    return EXIT_FAILURE;
-  }
-
-  int freq[26]={0};
-  int c;
-  int n = 0;
-
-  while (((c = fgetc(f)) != EOF) &&  n<=100){
-
-    if (isalpha(c)){
-      freq[c-97] = freq[c-97] + 1;
-      n++;
+int main(int argc, char ** argv)
+{
+  if(argc != 2)
+    {fprintf(stderr,"Invalid argc\n");
+      return EXIT_FAILURE;
     }
-  }
 
-  size_t i = largestindx(freq, 26);
+  FILE *f=fopen(argv[1], "r");
+  if(f==NULL)
+    {fprintf(stderr,"Could not open the file\n");
+      return EXIT_FAILURE;
+    }
 
-  int key = (i+22)%26;
+  char a[7000];
+  for(int i=0;i<7000;i++)
+    {a[i]=fgetc(f);
+    }
 
+  int k=freq(a);
 
-  printf("%d\n",key);
-
-
-  if (fclose(f) != 0) {
+  if(k>=0 && k<26)
+    {printf("%d\n",k);
+    }
+  if(k<0 && k>=26)
+    { fprintf(stderr,"Key not in range\n");
+      return EXIT_FAILURE;
+    }
+  if(fclose(f) != 0) {
     fprintf(stderr,"Failed to close the input file!\n");
     return EXIT_FAILURE;
   }
-
   return EXIT_SUCCESS;
 }
+
