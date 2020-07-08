@@ -5,7 +5,7 @@
 int freq(char *a)
 {int count=1;
   int countmax=1;
-  char max=a[0];
+  int max=a[0];
   for(int i=0;i<7000;i++)
     {count=1;
       for(int j=i+1;j<7000;j++)
