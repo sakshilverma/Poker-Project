@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<ctype.h>
 
-int freq(char *a)
+int freq(char a[])
 {int count=1;
   int countmax=1;
   char max=a[0];
