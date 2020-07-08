@@ -8,11 +8,11 @@ int freq(FILE *f)
   while((b=fgetc(f)) != EOF)
     {if(isalpha(b))
 	{b=tolower(b); 
-	  k=b-97;
+	  k=b-'a';
       a[k]=a[k]+1;
     }
     }
-   int countmax=a[0];
+   int countmax=0;
 
   for(int i=0;i<26;i++)
     {if(countmax<a[i])
