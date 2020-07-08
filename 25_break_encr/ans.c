@@ -15,7 +15,7 @@ int freq(FILE *f)
     }
    int max=a[0];
 
-  for(int i=0;i<100;i++)
+  for(int i=0;i<99;i++)
     {count=1;
       for(int j=i+1;j<100;j++)
 	{if(isalpha(a[i]) && isalpha(a[j]))
