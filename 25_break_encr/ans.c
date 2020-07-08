@@ -27,11 +27,11 @@ int main(int argc, char ** argv)
     }
 
    int a[26]={0};
-  int b,k1,n=0;
+  int b,n=0;
   while(((b=fgetc(f)) != EOF) && n<500)
     {if(isalpha(b))
-	{k1=b-'a';
-      a[k1]=a[k1]+1;
+	{b=b-'a';
+      a[b]=a[b]+1;
 	} n++;
     }
   
