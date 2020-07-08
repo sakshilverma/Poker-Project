@@ -3,13 +3,14 @@
 #include<ctype.h>
 
 int freq(int *a)
-{int countmax=0;
+{int countmax=0,max=0;
  for(int i=0;i<26;i++)
     {if(countmax<a[i])
-     {countmax=i;
+	{countmax=a[i];
+	  max=i;
 		}
 	    }
-  int key=(countmax+22)%26;
+  int key=(max+22)%26;
   return key;
 }
 
@@ -30,7 +31,8 @@ int main(int argc, char ** argv)
   int b,n=0;
   while(((b=fgetc(f)) != EOF) && n<500)
     {if(isalpha(b))
-	{b=b-'a';
+	{b=tolower(b);
+	  b = b - 'a';
       a[b]=a[b]+1;
 	} n++;
     }
@@ -38,7 +40,7 @@ int main(int argc, char ** argv)
   int k=freq(a);
 
   if(k>=0 && k<26)
-    {fprintf(stdout,"%c\n",k);
+    {fprintf(stdout,"%d\n",k);
     }
   if(k<0 && k>=26)
     { fprintf(stderr,"Key not in range\n");
