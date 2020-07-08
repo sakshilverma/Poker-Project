@@ -6,12 +6,10 @@ int freq(FILE *f)
 {int count=1;
   int countmax=1;
   int a[100],b,k=0;
-  while((b=fgetc(f)) != EOF)
+  while((b=fgetc(f)) != EOF && k<100)
     {a[k]=b;
       if(k<99)
 	{k++;}
-      if(k==99)
-	{break;}
     }
    int max=a[0];
 
