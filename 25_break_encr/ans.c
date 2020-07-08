@@ -28,7 +28,7 @@ int main(int argc, char ** argv)
 
    int a[26]={0};
   int b,n=0;
-  while(((b=fgetc(f)) != EOF) && n<2000)
+  while(((b=fgetc(f)) != EOF) && n<500)
     {if(isalpha(b))
 	{b=b-'a';
       a[b]=a[b]+1;
@@ -38,7 +38,7 @@ int main(int argc, char ** argv)
   int k=freq(a);
 
   if(k>=0 && k<26)
-    {printf("%d\n",k);
+    {fprintf(stdout,"%d\n",k);
     }
   if(k<0 && k>=26)
     { fprintf(stderr,"Key not in range\n");
