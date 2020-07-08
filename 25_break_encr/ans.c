@@ -8,7 +8,7 @@ int freq(FILE *f)
     {if(isalpha(b))
 	{
 	  k=b-'a';
-      a[k]+=1;
+      a[k]=a[k]+1;
     }
     }
    int countmax=a[0];
