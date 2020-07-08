@@ -9,14 +9,15 @@ int freq(char *a)
   for(int i=0;i<100;i++)
     {count=1;
       for(int j=i+1;j<100;j++)
-	{if(a[i]==a[j])
+	{if(isalpha(a[i]) && isalpha(a[j]))
+	    {if(a[i]==a[j])
 	    {count++;
 	      if(count>countmax)
 		{countmax=count;
 		  max=a[i];
 		}
 	    }
-	    }
+	    }}
     }
   int m = max - 'e';
   if(m<0)
