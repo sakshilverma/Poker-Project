@@ -1,15 +1,15 @@
-Grading at Wed Jul  8 11:46:21 UTC 2020
+Grading at Wed Jul  8 11:47:09 UTC 2020
 Attempting to compile breaker.c 
 make: 'breaker' is up to date.
 testcase1 passed
 #################################################
 testcase2:
-valgrind reported memory errors or your program ran too long
+testcase2 passed
 #################################################
 testcase3:
-valgrind reported memory errors or your program ran too long
+testcase3 failed
 #################################################
 testcase4:
-valgrind reported memory errors or your program ran too long
+testcase4 failed
 
 Overall Grade: F
