@@ -18,8 +18,8 @@ int freq(FILE *f)
      {countmax=i;
 		}
 	    }
-    
-  return ((countmax+22)%26);
+  int key=(countmax+22)%26;
+  return key;
 }
 
 int main(int argc, char ** argv)
