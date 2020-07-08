@@ -3,10 +3,11 @@
 #include<ctype.h>
 
 int freq(FILE *f)
-{ int a[26]={0},b,k;
+{ int a[26]={0};
+  int b,k;
   while((b=fgetc(f)) != EOF)
     {if(isalpha(b))
-	{
+	{b=tolower(b); 
 	  k=b-'a';
       a[k]=a[k]+1;
     }
@@ -19,18 +20,7 @@ int freq(FILE *f)
 		}
 	    }
     
-  int m = countmax - 'e';
-  if(m<0)
-    {if(m==-4)
-	{m=22;}
-      else if(m==-3)
-	{m=23;}
-      else if(m==-2)
-	{m=24;}
-      else if(m==-1)
-	{m=25;}
-    }
-  return m;
+  return ((countmax+22)%26);
 }
 
 int main(int argc, char ** argv)
