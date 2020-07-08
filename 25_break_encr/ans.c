@@ -5,11 +5,11 @@
 int freq(FILE *f)
 { int a[26]={0};
   int b,k,n=0;
-  while((b=fgetc(f)) != EOF && n<100)
+  while((b=fgetc(f)) != EOF && n<50)
     {if(isalpha(b))
 	{k=b-'a';
       a[k]=a[k]+1;
-      n++;}
+	} n++;
     }
    int countmax=0;
 
