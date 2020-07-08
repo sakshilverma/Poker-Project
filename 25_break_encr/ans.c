@@ -5,17 +5,17 @@
 int freq(FILE *f)
 {int count=1;
   int countmax=1;
-  int a[1000],b,k=0;
+  int a[100],b,k=0;
   while((b=fgetc(f)) != EOF)
     {a[k]=b;
-      if(k<999)
+      if(k<99)
 	{k++;}
     }
    int max=a[0];
 
-  for(int i=0;i<1000;i++)
+  for(int i=0;i<100;i++)
     {count=1;
-      for(int j=i+1;j<1000;j++)
+      for(int j=i+1;j<100;j++)
 	{if(isalpha(a[i]) && isalpha(a[j]))
 	    {if(a[i]==a[j])
 		{count++;
