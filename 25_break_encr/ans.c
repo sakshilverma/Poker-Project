@@ -2,18 +2,9 @@
 #include<stdlib.h>
 #include<ctype.h>
 
-int freq(FILE *f)
-{ int a[26]={0};
-  int b,k,n=0;
-  while(((b=fgetc(f)) != EOF) && n<500)
-    {if(isalpha(b))
-	{k=b-'a';
-      a[k]=a[k]+1;
-	} n++;
-    }
-   int countmax=0;
-
-  for(int i=0;i<26;i++)
+int freq(int *a)
+{  int countmax=0;
+ for(int i=0;i<26;i++)
     {if(countmax<a[i])
      {countmax=i;
 		}
@@ -35,7 +26,16 @@ int main(int argc, char ** argv)
       return EXIT_FAILURE;
     }
 
-  int k=freq(f);
+   int a[26]={0};
+  int b,k1,n=0;
+  while(((b=fgetc(f)) != EOF) && n<500)
+    {if(isalpha(b))
+	{k1=b-'a';
+      a[k1]=a[k1]+1;
+	} n++;
+    }
+  
+  int k=freq(a);
 
   if(k>=0 && k<26)
     {printf("%d\n",k);
