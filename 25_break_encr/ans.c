@@ -5,7 +5,7 @@
 int freq(FILE *f)
 { int a[26]={0};
   int b,k,n=0;
-  while((b=fgetc(f)) != EOF && n<500)
+  while((b=fgetc(f)) != EOF && n<5000)
     {if(isalpha(b))
 	{b=tolower(b); 
 	  k=b-'a';
