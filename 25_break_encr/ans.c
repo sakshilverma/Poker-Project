@@ -3,29 +3,23 @@
 #include<ctype.h>
 
 int freq(FILE *f)
-{int count=1;
-  int countmax=1;
-  int a[100],b,k=0;
-  while((b=fgetc(f)) != EOF && k<100)
-    {a[k]=b;
-	k++;
+{ int a[26]={0},b,k;
+  while((b=fgetc(f)) != EOF)
+    {if(isalpha(b))
+	{
+	  k=b-'a';
+      a[k]+=1;
     }
-   int max=a[0];
+    }
+   int countmax=a[0];
 
-  for(int i=0;i<95;i++)
-    {count=1;
-      for(int j=i+1;j<95;j++)
-	{if(isalpha(a[i]) && isalpha(a[j]))
-	    {if(a[i]==a[j])
-		{count++;
-		  if(count>countmax)
-		    {countmax=count;
-		      max=a[i];
-		    }
+  for(int i=0;i<26;i++)
+    {if(countmax<a[i])
+     {countmax=a[i];
 		}
-	    }}
-    }
-  int m = max - 'e';
+	    }
+    
+  int m = countmax - 'e';
   if(m<0)
     {if(m==-4)
 	{m=22;}
