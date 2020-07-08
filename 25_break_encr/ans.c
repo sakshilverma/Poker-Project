@@ -6,9 +6,9 @@ int freq(char *a)
 {int count=1;
   int countmax=1;
   char max=a[0];
-  for(int i=0;i<10000;i++)
+  for(int i=0;i<5000;i++)
     {count=1;
-      for(int j=i+1;j<10000;j++)
+      for(int j=i+1;j<5000;j++)
 	{if(isalpha(a[i]) && isalpha(a[j]))
 	    {if(a[i]==a[j])
 	    {count++;
@@ -46,8 +46,8 @@ int main(int argc, char ** argv)
       return EXIT_FAILURE;
     }
 
-  char a[10000];
-  for(int i=0;i<10000;i++)
+  char a[5000];
+  for(int i=0;i<5000;i++)
     {a[i]=fgetc(f);
     }
 
