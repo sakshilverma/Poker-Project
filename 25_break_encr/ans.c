@@ -8,8 +8,7 @@ int freq(FILE *f)
   int a[100],b,k=0;
   while((b=fgetc(f)) != EOF && k<100)
     {a[k]=b;
-      if(k<99)
-	{k++;}
+	k++;
     }
    int max=a[0];
 
