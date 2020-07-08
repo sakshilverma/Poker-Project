@@ -38,7 +38,7 @@ int main(int argc, char ** argv)
   int k=freq(a);
 
   if(k>=0 && k<26)
-    {fprintf(stdout,"%d\n",k);
+    {fprintf(stdout,"%c\n",k);
     }
   if(k<0 && k>=26)
     { fprintf(stderr,"Key not in range\n");
