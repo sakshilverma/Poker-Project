@@ -55,8 +55,10 @@ int main(int argc, char ** argv)
  if(k>=0 && k<26)
    {fprintf(stdout,"%d\n",k);
    }
- else{ fprintf(stderr,"Key not in range\n");
+ else if(k<0 && k>=26)
+   { fprintf(stderr,"Key not in range\n");
    return EXIT_FAILURE;
  }
+ 
  return EXIT_SUCCESS;
 }
