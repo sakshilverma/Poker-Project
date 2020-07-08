@@ -28,7 +28,7 @@ int main(int argc, char ** argv)
 
    int a[26]={0};
   int b,n=0;
-  while(((b=fgetc(f)) != EOF) && n<=100)
+  while(((b=fgetc(f)) != EOF) && n<2000)
     {if(isalpha(b))
 	{b=b-'a';
       a[b]=a[b]+1;
