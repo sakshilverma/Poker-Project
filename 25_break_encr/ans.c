@@ -28,13 +28,13 @@ int main(int argc, char ** argv)
     }
 
    int a[26]={0};
-  int b,n=0;
-  while(((b=fgetc(f)) != EOF) && n<500)
+  int b;
+  while((b=fgetc(f)) != EOF)
     {if(isalpha(b))
 	{b=tolower(b);
 	  b = b - 'a';
       a[b]=a[b]+1;
-	} n++;
+	}
     }
   
   int k=freq(a);
