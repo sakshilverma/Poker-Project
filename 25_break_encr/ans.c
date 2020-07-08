@@ -10,6 +10,8 @@ int freq(FILE *f)
     {a[k]=b;
       if(k<99)
 	{k++;}
+      if(k==99)
+	{break;}
     }
    int max=a[0];
 
