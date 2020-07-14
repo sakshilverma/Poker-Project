@@ -35,14 +35,21 @@ int main(int argc, char **argv)
     }
 
   char matrix[10][10];
-  char a[11];
+  char a[12];
   int l=0;
-  while(fgets(a,11,f))
+  while(fgets(a,12,f))
     {
       if(l>9)
 	{fprintf(stderr,"Too many lines\n");
       return EXIT_FAILURE;
 	}
+
+      if (strchr(a,'\0') != &a[11]){
+
+	fprintf(stderr,"Few arguments\n");
+	exit(EXIT_FAILURE);
+
+      }
 
       if(strchr(a,'\n') != &a[10])
 	{ if (strchr(a,'\n') == NULL){
