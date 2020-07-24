@@ -21,33 +21,33 @@ int main(int argc, char ** argv) {
   if(argc>=0)
     {
       if(argc==1)
-	{ FILE *f=fopen(argv[0], "r");
-	  char *line=0;
+	{ char *line={0};
   size_t sz=0;
-  while(getline(&line, &sz, f) >= 0)
+  while(getline(&line, &sz, stdin) >= 0)
     {char ** data=&line;
-      size_t count=sz;
+      size_t count=sizeof(line)/(sizeof(line[0]));
       sortData(data, count);
       printf("%s", line);
-      }
-  free(line);
-  if(fclose(f) != 0)
-    {perror("Failed to close the input file\n");
-      return EXIT_FAILURE;
-    }}
+       free(line);
+    }
+  return EXIT_SUCCESS;}
 
       if(argc>1)
-	{for(int i=0;i<argc;i++)
+	{for(int i=1;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
-	  char *line=0;
+	  if(f==NULL)
+	    {perror("Could not open file");
+	      continue;
+	    }
+	  char *line={0};
   size_t sz=0;
   while(getline(&line, &sz, f) >= 0)
     {char ** data=&line;
-      size_t count=sz;
+      size_t count=sizeof(line)/(sizeof(line[0]));
       sortData(data, count);
       printf("%s", line);
-      }
   free(line);
+    }
   if(fclose(f) != 0)
     {perror("Failed to close the input file\n");
       return EXIT_FAILURE;
