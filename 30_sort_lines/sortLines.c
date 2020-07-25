@@ -22,7 +22,7 @@ char *readData(FILE *input)
   char *ans=0;
   int j=0;
 while(getline(&line, &sz, input) >= 0)
-  {ans[j]=*line;
+  { ans[j]=*line;
     j++;
     }
  free(line);
@@ -42,7 +42,7 @@ if(argc<0){
   }
 
   if(argc==1)
-    { char *d =readData(stdin);
+    { char *d = readData(stdin);
       char **data=&d;
       size_t count=countLines(data);
   
@@ -56,9 +56,10 @@ if(argc<0){
 	    printf("%s", buffer);
 	  free(data[i]);
 	  sz_buffer=0;
-	}
+      }
     free(data);
-       return EXIT_SUCCESS;}
+    free(buffer);
+    return EXIT_SUCCESS;}
 
       if(argc>1)
 	{for(int i=1;i<argc;i++)
@@ -68,9 +69,9 @@ if(argc<0){
 	      continue;
 	    }
 
-char *d =readData(f);
-      char **data=&d;
-      size_t count=countLines(data);
+char *d=readData(f);
+ char **data=&d;
+ size_t count=countLines(data);
   
     sortData(data, count);
     char *buffer=NULL;
@@ -80,10 +81,11 @@ char *d =readData(f);
 	buffer=realloc(buffer, sz_buffer);
 	sscanf(data[i], "%[^\t]",buffer);
 	    printf("%s", buffer);
-	  free(data[i]);
+	    free(data[i]);
 	  sz_buffer=0;
-	}
+}
     free(data);
+    free(buffer);
     return EXIT_SUCCESS;
 	
   if(fclose(f) != 0)
