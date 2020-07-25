@@ -66,7 +66,7 @@ if(argc<0){
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    {fprintf(stderr,"Could not open file");
-	      continue;
+	      return EXIT_FAILURE;
 	    }
 
 char *d=readData(f);
