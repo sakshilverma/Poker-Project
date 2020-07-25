@@ -18,45 +18,65 @@ void sortData(char ** data, size_t count) {
 
 int main(int argc, char ** argv) {
     //WRITE YOUR CODE HERE!
-  if(argc>=0)
-    {
-      if(argc==1)
-	{ char *line={0};
+if(argc<0){
+  fprintf(stderr,"Insuficient argc");
+  return EXIT_FAILURE;
+  }
+
+  if(argc==1)
+	{ char *line=NULL;
   size_t sz=0;
+  int j=0;
+  char *all={0};
   while(getline(&line, &sz, stdin) >= 0)
-    {char ** data=&line;
-      size_t count=sizeof(line)/(sizeof(line[0]));
-      sortData(data, count);
-      printf("%s", line);
-       free(line);
+    { all=malloc(sz);
+      strcpy(all, line);
+      j++;
+      all++;
     }
-  return EXIT_SUCCESS;}
+  free(line);
+    char ** data=&all;
+      size_t count=j;
+      sortData(data, count);
+      for(int m=0;m<j;m++)
+	{  printf("%s", all);
+	  free(all);
+	  all++;
+	}
+       return EXIT_SUCCESS;}
 
       if(argc>1)
 	{for(int i=1;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
-	    {perror("Could not open file");
+	    {fprintf(stderr,"Could not open file");
 	      continue;
 	    }
-	  char *line={0};
-  size_t sz=0;
-  while(getline(&line, &sz, f) >= 0)
-    {char ** data=&line;
-      size_t count=sizeof(line)/(sizeof(line[0]));
-      sortData(data, count);
-      printf("%s", line);
-  free(line);
+	  char *line1=NULL;
+  size_t sz1=0;
+  int k=0;
+  char *all1={0};
+  while(getline(&line1, &sz1, f) >= 0)
+    { all1=malloc(sz1);
+      strcpy(all1, line1);
+      k++;
+      all1++;
     }
+  free(line1);
+  char ** data1=&all1;
+      size_t count1=k;
+      sortData(data1, count1);
+      int n1;
+      {for(n1=0;n1<k;n1++)
+      printf("%s", all1);
+	  free(all1);
+	  all1++;
+      }
   if(fclose(f) != 0)
     {perror("Failed to close the input file\n");
       return EXIT_FAILURE;
     	}
 	}}
-    }
-  if(argc<0){
-  return EXIT_FAILURE;
-  }
-
+    
   return EXIT_SUCCESS;
 }
