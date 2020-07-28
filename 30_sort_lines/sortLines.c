@@ -40,17 +40,15 @@ while(getline(&line, &sz, stdin) >= 0)
     for(size_t i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
-	  
-      }
+	        }
     free(ans);
     return EXIT_SUCCESS;}
 
-      if(argc>1)
-	{for(int i=1;i<argc;i++)
+  if(argc>1)
+	{for(int i=0;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    {fprintf(stderr,"Could not open file");
-	      fclose(f);
 	      return EXIT_FAILURE;
 	    }
 
@@ -61,27 +59,25 @@ char *line=NULL;
 while(getline(&line, &sz, f) >= 0)
   { ans=realloc(ans, (j+1)*sizeof(*line));
     ans[j]=line;
-    line=NULL;
-     j++;
+line=NULL;
+ j++;
   }
  free(line);
-  
-    sortData(ans, j);
-    for(size_t i=0;i<j;i++)
+ sortData(ans, j);
+
+     for(size_t i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
-	  
-      }
+	        }
     free(ans);
-
-  if(fclose(f) != 0)
-    {perror("Failed to close the input file\n");
-      return EXIT_FAILURE;
-    }
+    if(fclose(f) != 0)
+      {perror("Failed to close the input file\n");
+	return EXIT_FAILURE;
+      }
 	}
-  return EXIT_SUCCESS;
-	
+	  return EXIT_SUCCESS;
+	  
 	}
-    
-  return EXIT_SUCCESS;
+	  return EXIT_SUCCESS;
+		
 }
