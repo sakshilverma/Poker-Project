@@ -48,7 +48,7 @@ while(getline(&line, &sz, stdin) >= 0)
 	{for(int i=0;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
-	    {fprintf(stderr,"Could not open file");
+	    {fprintf(stderr,"Could not open file\n");
 	      exit(EXIT_FAILURE);
 	    }
 
@@ -64,7 +64,7 @@ line=NULL;
   }
   free(line);
    
- sortData(ans, j-1);
+ sortData(ans, j);
 
      for(size_t i=0;i<j;i++)
        {  printf("%s", ans[i]);
