@@ -66,8 +66,8 @@ line=NULL;
    
  sortData(ans, j);
 
-     for(size_t i=0;i<j-1;i++)
-       {  printf("%s", ans[i]);
+     for(size_t i=0;i<j;i++)
+       {  printf("%s ", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
