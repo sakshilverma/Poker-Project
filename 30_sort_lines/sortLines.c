@@ -75,7 +75,8 @@ line=NULL;
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	return EXIT_FAILURE;
-      }	}
+      }
+    return EXIT_SUCCESS;}
 	  return EXIT_SUCCESS;
 	}
 	  return EXIT_SUCCESS;
