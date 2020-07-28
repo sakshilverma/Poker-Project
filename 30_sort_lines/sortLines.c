@@ -16,49 +16,32 @@ void sortData(char ** data, size_t count) {
   qsort(data, count, sizeof(char *), stringOrder);
 }
 
-char *readData(FILE *input)
-{char *line=NULL;
-  size_t sz;
-  char *ans=0;
-  int j=0;
-while(getline(&line, &sz, input) >= 0)
-  { ans[j]=*line;
-    j++;
-    }
- free(line);
- return ans;
-}
-
-size_t countLines(char **count)
-{size_t size= (sizeof(count)) / sizeof(count[0]);
-  return size;
-}
-
 int main(int argc, char ** argv) {
     //WRITE YOUR CODE HERE!
-if(argc<0){
+if(argc<1){
   fprintf(stderr,"Insuficient argc");
-  return EXIT_FAILURE;
   }
 
   if(argc==1)
-    { char *d = readData(stdin);
-      char **data=&d;
-      size_t count=countLines(data);
+{char *line=NULL;
+  size_t sz;
+  size_t j=0;
+  char **ans=NULL;
+while(getline(&line, &sz, stdin) >= 0)
+  { ans=realloc(ans, (j+1)*sizeof(*line));
+    ans[j]=line;
+    line=NULL;
+     j++;
+  }
+ free(line);
   
-    sortData(data, count);
-    char *buffer=NULL;
-    size_t sz_buffer;
-    for(size_t i=0;i<count;i++)
-      {  sz_buffer =strlen(data[i])+1;
-	buffer=realloc(buffer, sz_buffer);
-	sscanf(data[i], "%[^\t]",buffer);
-	    printf("%s", buffer);
-	  free(data[i]);
-	  sz_buffer=0;
+    sortData(ans, j);
+    for(size_t i=0;i<j;i++)
+      {	    printf("%s", ans[i]);
+	  free(ans[i]);
+	  
       }
-    free(data);
-    free(buffer);
+    free(ans);
     return EXIT_SUCCESS;}
 
       if(argc>1)
@@ -66,33 +49,36 @@ if(argc<0){
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    {fprintf(stderr,"Could not open file");
-	      return EXIT_FAILURE;
+	      continue;
 	    }
 
-char *d=readData(f);
- char **data=&d;
- size_t count=countLines(data);
+char *line=NULL;
+  size_t sz;
+  size_t j=0;
+  char **ans=NULL;
+while(getline(&line, &sz, f) >= 0)
+  { ans=realloc(ans, (j+1)*sizeof(*line));
+    ans[j]=line;
+    line=NULL;
+     j++;
+  }
+ free(line);
   
-    sortData(data, count);
-    char *buffer=NULL;
-    size_t sz_buffer;
-    for(size_t i=0;i<count;i++)
-      {  sz_buffer =strlen(data[i])+1;
-	buffer=realloc(buffer, sz_buffer);
-	sscanf(data[i], "%[^\t]",buffer);
-	    printf("%s", buffer);
-	    free(data[i]);
-	  sz_buffer=0;
-}
-    free(data);
-    free(buffer);
-    return EXIT_SUCCESS;
-	
+    sortData(ans, j);
+    for(size_t i=0;i<j;i++)
+      {	    printf("%s", ans[i]);
+	  free(ans[i]);
+	  
+      }
+    free(ans);
+
   if(fclose(f) != 0)
     {perror("Failed to close the input file\n");
       return EXIT_FAILURE;
-    	}
-	}}
+    }}
+  return EXIT_SUCCESS;
+	
+	}
     
   return EXIT_SUCCESS;
 }
