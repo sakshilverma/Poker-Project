@@ -20,7 +20,8 @@ int main(int argc, char ** argv) {
     //WRITE YOUR CODE HERE!
 if(argc<1){
   fprintf(stderr,"Insuficient argc");
-  }
+  return EXIT_FAILURE;
+ }
 
   if(argc==1)
 {char *line=NULL;
@@ -49,7 +50,8 @@ while(getline(&line, &sz, stdin) >= 0)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    {fprintf(stderr,"Could not open file");
-	      continue;
+	      fclose(f);
+	      return EXIT_FAILURE;
 	    }
 
 char *line=NULL;
@@ -75,7 +77,8 @@ while(getline(&line, &sz, f) >= 0)
   if(fclose(f) != 0)
     {perror("Failed to close the input file\n");
       return EXIT_FAILURE;
-    }}
+    }
+	}
   return EXIT_SUCCESS;
 	
 	}
