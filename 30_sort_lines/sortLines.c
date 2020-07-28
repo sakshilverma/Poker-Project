@@ -67,7 +67,7 @@ line=NULL;
  sortData(ans, j);
 
      for(size_t i=0;i<j;i++)
-       {  fprintf(stdout,"%s", ans[i]);
+       {  fprintf(stdout,"%s\t", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
