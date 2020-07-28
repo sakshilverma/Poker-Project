@@ -49,7 +49,7 @@ while(getline(&line, &sz, stdin) >= 0)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    {fprintf(stderr,"Could not open file");
-	      return EXIT_FAILURE;
+	      continue;
 	    }
 
 char *line=NULL;
