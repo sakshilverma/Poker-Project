@@ -64,10 +64,10 @@ line=NULL;
   }
   free(line);
    
- sortData(ans, j);
+ sortData(ans, j-1);
 
      for(size_t i=0;i<j;i++)
-       {  printf("%s ", ans[i]);
+       {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
