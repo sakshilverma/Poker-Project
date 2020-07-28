@@ -23,7 +23,7 @@ if(argc<1){
   return EXIT_FAILURE;
  }
 
-  if(argc==1)
+ if(argc==1)
 {char *line=NULL;
   size_t sz;
   size_t j=0;
@@ -57,26 +57,25 @@ char *line=NULL;
   size_t j=0;
   char **ans=NULL;
 while(getline(&line, &sz, f) >= 0)
-  { ans=realloc(ans, (j+1)*sizeof(*line));
+  { ans=realloc(ans, (j+1) * sizeof(*ans));
     ans[j]=line;
 line=NULL;
  j++;
   }
- free(line);
+  free(line);
+   
  sortData(ans, j);
 
      for(size_t i=0;i<j;i++)
-      {	    printf("%s", ans[i]);
+       {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
+ 
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	return EXIT_FAILURE;
-      }
-	}
-	  return EXIT_SUCCESS;
-	  
+      }	}
 	}
 	  return EXIT_SUCCESS;
 		
