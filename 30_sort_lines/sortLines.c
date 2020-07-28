@@ -20,7 +20,7 @@ int main(int argc, char ** argv) {
     //WRITE YOUR CODE HERE!
 if(argc<1){
   fprintf(stderr,"Insuficient argc");
-  return EXIT_FAILURE;
+  exit(EXIT_FAILURE);
  }
 
  if(argc==1)
@@ -67,7 +67,7 @@ line=NULL;
  sortData(ans, j);
 
      for(size_t i=0;i<j;i++)
-       {  printf("%s\n", ans[i]);
+       {  fprintf(stdout,"%s", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
