@@ -35,9 +35,9 @@ while(getline(&line, &sz, stdin) >= 0)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
-    free(ans);
  free(line);
-   
+       free(ans);
+
     return EXIT_SUCCESS;}
 
  else if(argc>1)
@@ -66,9 +66,9 @@ line=NULL;
        {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
-    free(ans);
  free(line);
-    
+free(ans);
+ 
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
