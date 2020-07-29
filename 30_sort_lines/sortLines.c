@@ -67,6 +67,7 @@ line=NULL;
 	free(ans[i]);
 	sz_buffer=0;
       }
+    free(buffer);
     free(ans);
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
