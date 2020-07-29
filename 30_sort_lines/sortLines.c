@@ -58,9 +58,10 @@ line=NULL;
   free(line);
     sortData(ans, j);
       for(size_t i=0;i<j;i++)
-       {  printf("%s", ans[i+1]);
-	  free(ans[i+1]);
+       {  printf("%s", ans[i]);
+	  free(ans[i]);
 	        }
+      printf("\n");
 free(ans);
  if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
