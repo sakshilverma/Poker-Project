@@ -30,26 +30,21 @@ while(getline(&line, &sz, stdin) >= 0)
      j++;
   }
  free(line);
-    
-    sortData(ans, j);
-
-    for(size_t i=0;i<j;i++)
+     sortData(ans, j);
+for(size_t i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
      free(ans);
-
-    return EXIT_SUCCESS;}
+     return EXIT_SUCCESS;}
 
  else if(argc>1)
 	{for(int i=0;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
-	    {fclose(f);
-	      perror("Could not open file\n");
+	    { perror("Could not open file\n");
 	      exit(EXIT_FAILURE);
 	    }
-
 char *line=NULL;
   size_t sz;
   size_t j=0;
@@ -61,29 +56,22 @@ line=NULL;
  j++;
   }
   free(line);
-   
- sortData(ans, j);
-    
-     for(size_t i=0;i<j;i++)
+    sortData(ans, j);
+      for(size_t i=0;i<j;i++)
        {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
 free(ans);
- 
-    if(fclose(f) != 0)
+ if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
       }
    }
-	  
-	  return EXIT_SUCCESS;
+return EXIT_SUCCESS;
 	}
 
  else if(argc<1){
   fprintf(stderr,"Insuficient argc");
   exit(EXIT_FAILURE);
- }
-
-	  return EXIT_SUCCESS;
-		
+ }	
 }
