@@ -31,12 +31,13 @@ while(getline(&line, &sz, stdin) >= 0)
   }
  
     sortData(ans, j);
+ free(line);
+   
     for(size_t i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
- free(line);
-       free(ans);
+     free(ans);
 
     return EXIT_SUCCESS;}
 
@@ -61,12 +62,12 @@ line=NULL;
   }
  
  sortData(ans, j);
-   
+ free(line);
+      
      for(size_t i=0;i<j;i++)
        {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
- free(line);
 free(ans);
  
     if(fclose(f) != 0)
