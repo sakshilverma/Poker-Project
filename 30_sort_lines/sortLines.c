@@ -62,7 +62,7 @@ line=NULL;
 	  strcat(outfilename, ".enc");
 	  FILE *outfile=fopen(outfilename, "w");
     for(size_t i=0;i<j;i++)
-      {  fprintf(outfile,"%s",ans[i]);
+      {  fprintf(outfile,"%s\n",ans[i]);
 	  free(ans[i]);
 	        }
     free(outfilename);
