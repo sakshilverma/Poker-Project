@@ -29,10 +29,10 @@ while(getline(&line, &sz, stdin) >= 0)
     line=NULL;
      j++;
   }
- 
-    sortData(ans, j);
  free(line);
-   
+    
+    sortData(ans, j);
+
     for(size_t i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
@@ -60,10 +60,10 @@ while(getline(&line, &sz, f) >= 0)
 line=NULL;
  j++;
   }
- 
+  free(line);
+   
  sortData(ans, j);
- free(line);
-      
+    
      for(size_t i=0;i<j;i++)
        {  printf("%s", ans[i]);
 	  free(ans[i]);
