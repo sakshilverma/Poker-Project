@@ -43,8 +43,8 @@ while(getline(&line, &sz, stdin) >= 0)
 	{for(int i=0;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
-	    {fprintf(stderr,"Could not open file\n");
-	      exit(EXIT_FAILURE);
+	    {perror("Could not open file\n");
+	      continue;
 	    }
 
 char *line=NULL;
