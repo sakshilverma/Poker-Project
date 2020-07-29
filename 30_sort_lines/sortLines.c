@@ -59,6 +59,7 @@ line=NULL;
     sortData(ans, j);
     char * outfilename=malloc((strlen(argv[i])+1) * sizeof(*outfilename));
 	  strcpy(outfilename, argv[i]);
+	  strcat(outfilename, ".enc");
 	  FILE *outfile=fopen(outfilename, "w");
     for(size_t i=0;i<j;i++)
       {  fprintf(outfile,"%s",ans[i]);
