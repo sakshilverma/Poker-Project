@@ -29,21 +29,23 @@ while(getline(&line, &sz, stdin) >= 0)
     line=NULL;
      j++;
   }
- free(line);
-  
+ 
     sortData(ans, j);
     for(size_t i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
+ free(line);
+   
     return EXIT_SUCCESS;}
 
  else if(argc>1)
 	{for(int i=0;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
-	    {perror("Could not open file\n");
+	    {fclose(f);
+	      perror("Could not open file\n");
 	      exit(EXIT_FAILURE);
 	    }
 
@@ -57,16 +59,16 @@ while(getline(&line, &sz, f) >= 0)
 line=NULL;
  j++;
   }
-  free(line);
-   
+ 
  sortData(ans, j);
-
+   
      for(size_t i=0;i<j;i++)
        {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
     free(ans);
- 
+ free(line);
+    
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
