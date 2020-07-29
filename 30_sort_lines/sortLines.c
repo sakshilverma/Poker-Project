@@ -44,7 +44,7 @@ while(getline(&line, &sz, stdin) >= 0)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    {perror("Could not open file\n");
-	      continue;
+	      exit(EXIT_FAILURE);
 	    }
 
 char *line=NULL;
@@ -71,7 +71,7 @@ line=NULL;
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
       }
-    }
+    return EXIT_SUCCESS;}
 	  
 	  return EXIT_SUCCESS;
 	}
