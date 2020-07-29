@@ -71,7 +71,7 @@ line=NULL;
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
       }
-    return EXIT_SUCCESS;}
+   }
 	  
 	  return EXIT_SUCCESS;
 	}
