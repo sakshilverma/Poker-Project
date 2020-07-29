@@ -18,11 +18,6 @@ void sortData(char ** data, size_t count) {
 
 int main(int argc, char ** argv) {
     //WRITE YOUR CODE HERE!
-if(argc<1){
-  fprintf(stderr,"Insuficient argc");
-  exit(EXIT_FAILURE);
- }
-
  if(argc==1)
 {char *line=NULL;
   size_t sz;
@@ -57,7 +52,7 @@ char *line=NULL;
   size_t j=0;
   char **ans=NULL;
 while(getline(&line, &sz, f) >= 0)
-  { ans=realloc(ans, (j+1) * sizeof(*ans));
+  { ans=realloc(ans, (j+1)*sizeof(*ans));
     ans[j]=line;
 line=NULL;
  j++;
