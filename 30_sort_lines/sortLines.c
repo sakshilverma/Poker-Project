@@ -21,7 +21,7 @@ int main(int argc, char ** argv) {
  if(argc==1)
 {char *line=NULL;
   size_t sz;
-  size_t j=0;
+  int j=0;
   char **ans=NULL;
 while(getline(&line, &sz, stdin) >= 0)
   { ans=realloc(ans, (j+1)*sizeof(*line));
@@ -31,7 +31,7 @@ while(getline(&line, &sz, stdin) >= 0)
   }
  free(line);
      sortData(ans, j);
-for(size_t i=0;i<j;i++)
+for(int i=0;i<j;i++)
       {	    printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
@@ -39,7 +39,7 @@ for(size_t i=0;i<j;i++)
      return EXIT_SUCCESS;}
 
  else if(argc>1)
-	{for(int i=0;i<argc;i++)
+	{for(int i=1;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
 	    { perror("Could not open file\n");
@@ -47,7 +47,7 @@ for(size_t i=0;i<j;i++)
 	    }
 char *line=NULL;
   size_t sz;
-  size_t j=0;
+  int j=0;
   char **ans=NULL;
 while(getline(&line, &sz, f) >= 0)
   { ans=realloc(ans, (j+1)*sizeof(*ans));
@@ -59,7 +59,7 @@ line=NULL;
     sortData(ans, j);
     char *buffer=NULL;
     size_t sz_buffer;
-    for(size_t i=0;i<j;i++)
+    for(int i=0;i<j;i++)
       {  sz_buffer =strlen(ans[i])+1;
 	buffer=realloc(buffer, sz_buffer);
 	sscanf(ans[i], "%[^\t]",buffer);
@@ -68,8 +68,6 @@ line=NULL;
 	sz_buffer=0;
       }
     free(ans);
-    fclose(f);
-    return EXIT_SUCCESS;
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
