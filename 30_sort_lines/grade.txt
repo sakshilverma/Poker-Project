@@ -1,8 +1,10 @@
-Grading at Wed Jul 29 06:34:36 UTC 2020
+Grading at Wed Jul 29 06:38:07 UTC 2020
 Attempting to compile sortLines.c
 #################################################
 testcase1:
-valgrind reported memory errors
+testcase1 passed, your program successfully indicated a failure
+  - Valgrind was clean (no errors, no memory leaks)
+valgrind was clean
 #################################################
 testcase2:
 Your output is correct
