@@ -61,6 +61,7 @@ line=NULL;
        {  printf("%s", ans[i]);
 	  free(ans[i]);
 	        }
+      free(ans[0]);
 free(ans);
  if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
