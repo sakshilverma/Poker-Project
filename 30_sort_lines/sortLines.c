@@ -57,12 +57,19 @@ line=NULL;
   }
   free(line);
     sortData(ans, j);
-      for(size_t i=0;i<j;i++)
-       {  printf("%s", ans[i]);
+    char * outfilename=malloc((strlen(argv[i])+1) * sizeof(*outfilename));
+	  strcpy(outfilename, argv[i]);
+	  FILE *outfile=fopen(outfilename, "w");
+    for(size_t i=0;i<j;i++)
+      {  fprintf(outfile,"%s",ans[i]);
 	  free(ans[i]);
 	        }
-      printf("\n");
-free(ans);
+    free(outfilename);
+    free(ans);
+ if(fclose(outfile) != 0)
+   {perror("Failed to close the output file\n");
+     exit(EXIT_FAILURE);
+   }
  if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
