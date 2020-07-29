@@ -64,10 +64,11 @@ line=NULL;
 	buffer=realloc(buffer, sz_buffer);
 	sscanf(ans[i], "%[^\t]",buffer);
 	printf("%s", buffer);
-	free(buffer);
+	free(ans[i]);
 	sz_buffer=0;
       }
     free(ans);
+    return EXIT_SUCCESS;
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
