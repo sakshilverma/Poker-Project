@@ -57,18 +57,11 @@ line=NULL;
   }
   free(line);
     sortData(ans, j);
-    char *buffer=NULL;
-    size_t sz_buffer;
-    for(int i=0;i<j;i++)
-      {  sz_buffer =strlen(ans[i])+1;
-	buffer=realloc(buffer, sz_buffer);
-	sscanf(ans[i], "%[^\t]",buffer);
-	printf("%s", buffer);
-	free(ans[i]);
-	sz_buffer=0;
-      }
-    free(buffer);
-    free(ans);
+for(int i=0;i<j;i++)
+      {	    printf("%s", ans[i]);
+	  free(ans[i]);
+	        }
+     free(ans);
     if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
