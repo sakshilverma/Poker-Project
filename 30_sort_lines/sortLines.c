@@ -65,10 +65,11 @@ line=NULL;
 	sscanf(ans[i], "%[^\t]",buffer);
 	printf("%s", buffer);
 	free(ans[i]);
-}
-    free(ans);
+	sz_buffer=0;
+      }
     free(buffer);
-   if(fclose(f) != 0)
+    free(ans);
+    if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
       }
