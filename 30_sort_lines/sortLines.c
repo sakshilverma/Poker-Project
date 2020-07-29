@@ -57,21 +57,18 @@ line=NULL;
   }
   free(line);
     sortData(ans, j);
-    char * outfilename=malloc((strlen(argv[i])+5) * sizeof(*outfilename));
-	  strcpy(outfilename, argv[i]);
-	  strcat(outfilename, ".enc");
-	  FILE *outfile=fopen(outfilename, "w");
+    char *buffer=NULL;
+    size_t sz_buffer;
     for(size_t i=0;i<j;i++)
-      {  fprintf(outfile,"%s\n",ans[i]);
-	  free(ans[i]);
-	        }
-    free(outfilename);
+      {  sz_buffer =strlen(ans[i])+1;
+	buffer=realloc(buffer, sz_buffer);
+	sscanf(ans[i], "%[^\t]",buffer);
+	printf("%s", buffer);
+	free(ans[i]);
+}
     free(ans);
- if(fclose(outfile) != 0)
-   {perror("Failed to close the output file\n");
-     exit(EXIT_FAILURE);
-   }
- if(fclose(f) != 0)
+    free(buffer);
+   if(fclose(f) != 0)
       {perror("Failed to close the input file\n");
 	exit(EXIT_FAILURE);
       }
