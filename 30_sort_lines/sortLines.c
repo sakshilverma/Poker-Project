@@ -39,7 +39,7 @@ while(getline(&line, &sz, stdin) >= 0)
     free(ans);
     return EXIT_SUCCESS;}
 
-  if(argc>1)
+ else if(argc>1)
 	{for(int i=0;i<argc;i++)
 	{ FILE *f=fopen(argv[i], "r");
 	  if(f==NULL)
@@ -75,6 +75,12 @@ line=NULL;
 	  
 	  return EXIT_SUCCESS;
 	}
+
+ else if(argc<1){
+  fprintf(stderr,"Insuficient argc");
+  exit(EXIT_FAILURE);
+ }
+
 	  return EXIT_SUCCESS;
 		
 }
