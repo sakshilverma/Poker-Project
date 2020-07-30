@@ -1,13 +1,11 @@
-Grading at Thu Jul 30 16:58:40 UTC 2020
+Grading at Thu Jul 30 17:17:07 UTC 2020
 Attempting to compile minesweeper.c
 #################################################
 testcase1:
 valgrind reported memory errors
 #################################################
 testcase2:
-Your output is correct
-  - Valgrind was clean (no errors, no memory leaks)
-valgrind was clean
+valgrind reported memory errors
 #################################################
 testcase3:
 Your output is correct
