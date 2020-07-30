@@ -57,7 +57,7 @@ b->totalMines=numMines;
   for(int i=0;i<numMines;i++)
     {addRandomMine(b);
     }
-  return NULL;
+  return b;
 }
 void printBoard(board_t * b) {    
   int found = 0;
