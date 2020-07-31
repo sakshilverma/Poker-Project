@@ -46,9 +46,8 @@ board_t * makeBoard(int w, int h, int numMines) {
  b->width=w;
  b->height=h;
 b->totalMines=numMines;
-
- if (w == 1) {
-   b->board = malloc (sizeof(int) * (b->width * b->height + 2));
+ if(w==1){
+ b->board = malloc (sizeof(int) * (b->width * b->height + 2));
  }
  else{
    b->board=malloc(b->width*b->height*sizeof(int));
