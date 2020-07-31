@@ -122,14 +122,14 @@ int countMines(board_t * b, int x, int y) {
 	{if(i!=x && j!=y)
 	  {if(i >= 0 && j >= 0 && i < b->width && j < b->height)
 	    {	  if(IS_MINE(b->board[j][i]))
-	  {++count;
+	  {count++;
 	  }
 	    }
 	  }
 	}
 	  }
 
-  return count;
+  return count+1;
 }
 int click (board_t * b, int x, int y) {
   if (x < 0 || x >= b->width ||
