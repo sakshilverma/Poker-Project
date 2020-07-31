@@ -120,7 +120,7 @@ int countMines(board_t * b, int x, int y) {
   for(int j=y-1;j<=y+1;j++)
     {for(int i=x-1;i<=x+1;i++)
 	{if(i!=x && j!=y)
-	  {if(i >= 0 && j >= 0 && i < b->width && j < b->height)
+	  {if(i >= 0 && j >= 0 && i <= b->width && j <= b->height)
 	    {	  if(IS_MINE(b->board[j][i]))
 	  {count++;
 	  }
@@ -129,7 +129,7 @@ int countMines(board_t * b, int x, int y) {
 	}
 	  }
 
-  return count+1;
+  return count;
 }
 int click (board_t * b, int x, int y) {
   if (x < 0 || x >= b->width ||
