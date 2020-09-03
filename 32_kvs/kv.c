@@ -7,7 +7,7 @@ char *splitLine(char *line){
   char *value=strchr(line,'=');
   *value='\0';
   value++;
-  value[strlen(value-1)]='/0';
+  value[strlen(value-1)]='\0';
   return value;
 }
 
@@ -26,15 +26,16 @@ kvarray_t * readKVs(const char * fname) {
       continue;
     }
 
-    kvarray->pair=realloc(kvarray->pair, ((numPairs+1) * sizeof(*kvarray->pair)));
     kvarray->pair[numPairs]=malloc(sizeof(*kvarray->pair[numPairs]));
     kvarray->pair[numPairs]->value=splitLine(line);
     kvarray->pair[numPairs]->key=line;
     line=NULL;
-    numPairs++
+    numPairs++;
   }
   free(line);
-  kvarray->pairs->numPairs=numPairs;
+  kvarray->numPairs=numPairs;
+  fclose(f);
+  return kvarray;
 }
 
 void freeKVs(kvarray_t * pairs) {
@@ -54,14 +55,11 @@ void printKVs(kvarray_t * pairs) {
 
 char * lookupValue(kvarray_t * pairs, const char * key) {
   //WRITE ME
-  int flag=0;
   for(int i=0;i<pairs->numPairs;i++){
     if(pairs->pair[i]->key==key){
-      flag=1;
       return pairs->pair[i]->value;
     }
   }
-  if(flag==0){
     return NULL;
-  }
+ 
 }
