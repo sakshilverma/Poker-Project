@@ -1,0 +1,34 @@
+Grading at Thu Sep  3 15:22:40 UTC 2020
+Attempting to compile:
+kv.c: In function ‘splitLine’:
+kv.c:10:26: error: multi-character character constant [-Werror=multichar]
+   value[strlen(value-1)]='/0';
+                          ^
+kv.c:10:26: error: overflow in implicit constant conversion [-Werror=overflow]
+kv.c: In function ‘readKVs’:
+kv.c:29:18: error: assignment to expression with array type
+     kvarray->pair=realloc(kvarray->pair, ((numPairs+1) * sizeof(*kvarray->pair)));
+                  ^
+kv.c:31:35: error: assignment to expression with array type
+     kvarray->pair[numPairs]->value=splitLine(line);
+                                   ^
+kv.c:32:33: error: assignment to expression with array type
+     kvarray->pair[numPairs]->key=line;
+                                 ^
+kv.c:35:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+kv.c:37:10: error: ‘kvarray_t {aka struct _kvarray_t}’ has no member named ‘pairs’
+   kvarray->pairs->numPairs=numPairs;
+          ^
+kv.c:38:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+kv.c: In function ‘lookupValue’:
+kv.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+The code did not compile!
+
+Overall Grade: F
