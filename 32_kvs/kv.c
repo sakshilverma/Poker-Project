@@ -17,7 +17,7 @@ kvarray_t * readKVs(const char * fname) {
   if(f==NULL){
     perror("Invalid file\n");
   }
-  kvarray_t *kvarray;
+  kvarray_t *kvarray=NULL;
  size_t numPairs=0;
   char *line=NULL;
   size_t sz;
@@ -25,7 +25,7 @@ kvarray_t * readKVs(const char * fname) {
     if(line[0]=='\n'){
       continue;
     }
-
+    kvarray->pair=realloc(kvarray->pair, ((numPairs+1) * sizeof(*kvarray->pair)));
     kvarray->pair[numPairs]=malloc(sizeof(*kvarray->pair[numPairs]));
     kvarray->pair[numPairs]->value=splitLine(line);
     kvarray->pair[numPairs]->key=line;
