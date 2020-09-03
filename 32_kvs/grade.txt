@@ -1,10 +1,13 @@
-Grading at Thu Sep  3 17:28:30 UTC 2020
+Grading at Thu Sep  3 18:18:19 UTC 2020
 Attempting to compile:
-kv.c: In function ‘readKVs’:
-kv.c:29:28: error: ‘kvarray’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
-     kvarray->pair[numPairs]=malloc(sizeof(*kvarray->pair[numPairs]));
-                            ^
-cc1: all warnings being treated as errors
-The code did not compile!
+#################################################
+testcase1:
+valgrind reported memory errors
+#################################################
+testcase2:
+valgrind reported memory errors
+#################################################
+testcase3:
+valgrind reported memory errors
 
 Overall Grade: F
