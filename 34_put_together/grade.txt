@@ -1,4 +1,4 @@
-Grading at Mon Sep  7 17:47:11 UTC 2020
+Grading at Mon Sep  7 17:51:12 UTC 2020
 Attempting to compile:
 rm -f  outname.o  counts.o  main.o  kv.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
@@ -11,35 +11,12 @@ testcase1:
 testcase1 failed, your program didn't indicate this is a failure case
 #################################################
 testcase2:
-Line_1_did_not_match
-Your file did not match the expected ouput
-Comparing file list1a.txt.counts with answer
-Your output is correct
-Comparing file list1b.txt.counts with answer
-Line_1_did_not_match
-Your file did not match the expected ouput
-Your output is incorrect
+valgrind reported memory errors
 #################################################
 testcase3:
-Line_1_did_not_match
-Your file did not match the expected ouput
-Comparing file list2a.txt.counts with answer
-Your output is correct
-Comparing file list2b.txt.counts with answer
-Line_1_did_not_match
-Your file did not match the expected ouput
-Your output is incorrect
-Comparing file list2c.txt.counts with answer
-Line_1_did_not_match
-Your file did not match the expected ouput
-Your output is incorrect
+valgrind reported memory errors
 #################################################
 testcase4:
-Line_1_did_not_match
-Your file did not match the expected ouput
-Comparing file list3a.txt.counts with answer
-Your output is correct
-  - Valgrind was clean (no errors, no memory leaks)
-valgrind was clean
+valgrind reported memory errors
 
 Overall Grade: F
