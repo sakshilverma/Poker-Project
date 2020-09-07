@@ -45,7 +45,10 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)
-  kvarray_t *kv=readKVs(argv[1]);  
+  kvarray_t *kv=readKVs(argv[1]);
+  if(kv==0){
+    return EXIT_FAILURE;
+  }
   //count from 2 to argc (call the number you count i)
   for(int i=2;i<argc;i++){
     //count the values that appear in the file named by argv[i], using kv as the key/value pair
@@ -59,6 +62,9 @@ int main(int argc, char ** argv) {
 
     //open the file named by outName (call that f)
     FILE *f=fopen(outName, "w");
+    if(f==NULL){
+      return EXIT_FAILURE;
+    }
     //print the counts from c into the FILE f
     printCounts(c, f);
     //close f
