@@ -16,6 +16,7 @@ kvarray_t * readKVs(const char * fname) {
   FILE *f=fopen(fname, "r");
   if(f==NULL){
     perror("Invalid file\n");
+    return 0;
   }
   kvarray_t *kvarray=NULL;
  kvarray=(kvarray_t*)malloc(100 * sizeof(kvarray_t));
