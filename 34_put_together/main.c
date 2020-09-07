@@ -27,6 +27,7 @@ return NULL;
     key=lookupValue(kvPairs,line);
     addCount(c,key);
     line=NULL;
+    free(key);
 }
   free(line);
   fclose(f);
