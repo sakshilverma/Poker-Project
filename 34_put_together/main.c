@@ -25,7 +25,7 @@ return NULL;
     for(int i=0;i<kvPairs->numPairs;i++){
       if(strcmp(line,kvPairs->pair[i]->key) == 0){
 	flag=1;
-	strcpy(key,kvPairs->pair[i]->value);
+	strcpy(key,kvPairs->pair[i]->key);
 	break;
       }
     }
