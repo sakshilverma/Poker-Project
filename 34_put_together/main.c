@@ -16,18 +16,18 @@ return NULL;
   char *key;
   char *line=NULL;
   size_t sz;
+  char *p=NULL;
   while(getline(&line,&sz,f) != -1){
     if(line[0]=='\n'){
       continue;
     }
-    char *p=strchr(line, '\n');
+    p=strchr(line, '\n');
     if(p!=NULL){
       *p='\0';
     }
     key=lookupValue(kvPairs,line);
     addCount(c,key);
     line=NULL;
-    free(key);
 }
   free(line);
   fclose(f);
@@ -40,8 +40,7 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)
-  kvarray_t *kv=(kvarray_t*)malloc(100*sizeof(kvarray_t));
-    kv=readKVs(argv[1]);
+  kvarray_t *kv=readKVs(argv[1]);
   if(kv==0){
     return EXIT_FAILURE;
   }
