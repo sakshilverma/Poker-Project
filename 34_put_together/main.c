@@ -13,26 +13,20 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
 return NULL;
   }
   counts_t *c=createCounts();
- char *key;
-  size_t sz;
+  char *key;
   char *line=NULL;
-  int flag=0;
+  size_t sz;
   while(getline(&line,&sz,f) != -1){
     if(line[0]=='\n'){
       continue;
     }
-    flag=0;
-    for(int i=0;i<kvPairs->numPairs;i++){
-      if(strcmp(line,kvPairs->pair[i]->key) == 0){
-	flag=1;
-	strcpy(key,kvPairs->pair[i]->key);
-	break;
-      }
+    char *p=strchr(line, '\n');
+    if(p!=NULL){
+      *p='\0';
     }
-    if(flag==0){
-      key=NULL;
-    }
+    key=lookupValue(kvPairs,line);
     addCount(c,key);
+    line=NULL;
 }
   free(line);
   fclose(f);
@@ -45,7 +39,8 @@ int main(int argc, char ** argv) {
     return EXIT_FAILURE;
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)
-  kvarray_t *kv=readKVs(argv[1]);
+  kvarray_t *kv=(kvarray_t*)malloc(100*sizeof(kvarray_t));
+    kv=readKVs(argv[1]);
   if(kv==0){
     return EXIT_FAILURE;
   }
