@@ -41,7 +41,7 @@ return NULL;
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
-  if(argc<=2){
+  if(argc<=1){
     return EXIT_FAILURE;
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)
@@ -68,7 +68,9 @@ int main(int argc, char ** argv) {
     //print the counts from c into the FILE f
     printCounts(c, f);
     //close f
-    fclose(f);
+    if(fclose(f) != 0){
+      return EXIT_FAILURE;
+    }
     //free the memory for outName and c
     free(outName);
     freeCounts(c);
