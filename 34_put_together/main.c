@@ -41,7 +41,7 @@ return NULL;
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
-  if(argc<1){
+  if(argc<=2){
     return EXIT_FAILURE;
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)
