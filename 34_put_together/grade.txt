@@ -1,4 +1,4 @@
-Grading at Mon Sep  7 20:06:32 UTC 2020
+Grading at Wed Sep  9 15:15:08 UTC 2020
 Attempting to compile:
 rm -f  outname.o  counts.o  main.o  kv.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 outname.c
@@ -11,79 +11,218 @@ testcase1:
 testcase1 failed, your program didn't indicate this is a failure case
 #################################################
 testcase2:
-Your file matched the expected output
+I expected to find a file called '62list1a.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1b.txt
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
 Comparing file list1a.txt.counts with answer
 Your output is correct
 Comparing file list1b.txt.counts with answer
-Your file matched the expected output
-Your output is correct
-  - Valgrind reported errors
-valgrind was not clean
-==3571== Memcheck, a memory error detector
-==3571== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3571== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3571== 
-==3571== Parent PID: 3570
-==3571== 
-==3571== 
-==3571== HEAP SUMMARY:
-==3571==     in use at exit: 2,520 bytes in 21 blocks
-==3571==   total heap usage: 86 allocs, 65 frees, 57,064 bytes allocated
-==3571== 
-==3571== 2,520 bytes in 21 blocks are definitely lost in loss record 1 of 1
-==3571==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3571==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==3571==    by 0x400CC7: countFile (main.c:20)
-==3571==    by 0x400D78: main (main.c:51)
-==3571== 
-==3571== LEAK SUMMARY:
-==3571==    definitely lost: 2,520 bytes in 21 blocks
-==3571==    indirectly lost: 0 bytes in 0 blocks
-==3571==      possibly lost: 0 bytes in 0 blocks
-==3571==    still reachable: 0 bytes in 0 blocks
-==3571==         suppressed: 0 bytes in 0 blocks
-==3571== 
-==3571== For counts of detected and suppressed errors, rerun with: -v
-==3571== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+I expected to find a file called '62list1b.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1b.txt
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Your output is incorrect
 #################################################
 testcase3:
-Your file matched the expected output
+I expected to find a file called '62list2a.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1b.txt
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
 Comparing file list2a.txt.counts with answer
 Your output is correct
 Comparing file list2b.txt.counts with answer
-Your file matched the expected output
-Your output is correct
+I expected to find a file called '62list2b.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1b.txt
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Your output is incorrect
 Comparing file list2c.txt.counts with answer
-Your file matched the expected output
-Your output is correct
-  - Valgrind reported errors
-valgrind was not clean
-==3583== Memcheck, a memory error detector
-==3583== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3583== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3583== 
-==3583== Parent PID: 3582
-==3583== 
-==3583== 
-==3583== HEAP SUMMARY:
-==3583==     in use at exit: 2,520 bytes in 21 blocks
-==3583==   total heap usage: 77 allocs, 56 frees, 78,100 bytes allocated
-==3583== 
-==3583== 2,520 bytes in 21 blocks are definitely lost in loss record 1 of 1
-==3583==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3583==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==3583==    by 0x400CC7: countFile (main.c:20)
-==3583==    by 0x400D78: main (main.c:51)
-==3583== 
-==3583== LEAK SUMMARY:
-==3583==    definitely lost: 2,520 bytes in 21 blocks
-==3583==    indirectly lost: 0 bytes in 0 blocks
-==3583==      possibly lost: 0 bytes in 0 blocks
-==3583==    still reachable: 0 bytes in 0 blocks
-==3583==         suppressed: 0 bytes in 0 blocks
-==3583== 
-==3583== For counts of detected and suppressed errors, rerun with: -v
-==3583== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+I expected to find a file called '62list2c.txt.counts' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+62list1a.txt
+62list1b.txt
+62list2a.txt
+62list2b.txt
+62list2c.txt
+62list3a.txt
+counts.c
+counts.h
+counts.o
+count_values
+count_values.stderr
+count_values.stdout
+grade.txt
+kv.c
+kv.h
+kv.o
+kvs1.txt
+kvs2.txt
+list1a.txt
+list1a.txt.ans
+list1b.txt
+list1b.txt.ans
+list2a.txt
+list2a.txt.ans
+list2b.txt
+list2b.txt.ans
+list2c.txt
+list2c.txt.ans
+main.c
+main.o
+Makefile
+outname.c
+outname.h
+outname.o
+README
+temp.txt
+vg.log
+Your output is incorrect
 #################################################
 testcase4:
 Line_3_did_not_match
@@ -93,37 +232,37 @@ Comparing file list3a.txt.counts with answer
 Your output is correct
   - Valgrind reported errors
 valgrind was not clean
-==3596== Memcheck, a memory error detector
-==3596== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3596== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3596== 
-==3596== Parent PID: 3595
-==3596== 
-==3596== 
-==3596== HEAP SUMMARY:
-==3596==     in use at exit: 960 bytes in 7 blocks
-==3596==   total heap usage: 45 allocs, 38 frees, 88,660 bytes allocated
-==3596== 
-==3596== 240 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==3596==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3596==    by 0x4EA8A2A: getdelim (iogetdelim.c:102)
-==3596==    by 0x400CC7: countFile (main.c:20)
-==3596==    by 0x400D78: main (main.c:51)
-==3596== 
-==3596== 720 bytes in 6 blocks are definitely lost in loss record 2 of 2
-==3596==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==3596==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
-==3596==    by 0x400CC7: countFile (main.c:20)
-==3596==    by 0x400D78: main (main.c:51)
-==3596== 
-==3596== LEAK SUMMARY:
-==3596==    definitely lost: 960 bytes in 7 blocks
-==3596==    indirectly lost: 0 bytes in 0 blocks
-==3596==      possibly lost: 0 bytes in 0 blocks
-==3596==    still reachable: 0 bytes in 0 blocks
-==3596==         suppressed: 0 bytes in 0 blocks
-==3596== 
-==3596== For counts of detected and suppressed errors, rerun with: -v
-==3596== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==188== Memcheck, a memory error detector
+==188== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==188== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==188== 
+==188== Parent PID: 187
+==188== 
+==188== 
+==188== HEAP SUMMARY:
+==188==     in use at exit: 960 bytes in 7 blocks
+==188==   total heap usage: 45 allocs, 38 frees, 88,660 bytes allocated
+==188== 
+==188== 240 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==188==    at 0x4C2FD5F: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==188==    by 0x4EA8A2A: getdelim (iogetdelim.c:102)
+==188==    by 0x400CC7: countFile (main.c:20)
+==188==    by 0x400D78: main (main.c:51)
+==188== 
+==188== 720 bytes in 6 blocks are definitely lost in loss record 2 of 2
+==188==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==188==    by 0x4EA89E7: getdelim (iogetdelim.c:62)
+==188==    by 0x400CC7: countFile (main.c:20)
+==188==    by 0x400D78: main (main.c:51)
+==188== 
+==188== LEAK SUMMARY:
+==188==    definitely lost: 960 bytes in 7 blocks
+==188==    indirectly lost: 0 bytes in 0 blocks
+==188==      possibly lost: 0 bytes in 0 blocks
+==188==    still reachable: 0 bytes in 0 blocks
+==188==         suppressed: 0 bytes in 0 blocks
+==188== 
+==188== For counts of detected and suppressed errors, rerun with: -v
+==188== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 
-Overall Grade: C
+Overall Grade: F
