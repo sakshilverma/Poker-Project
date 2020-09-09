@@ -21,6 +21,8 @@ return NULL;
     if(line[0]=='\n'){
       continue;
     }
+    p=NULL;
+    key=NULL;
     p=strchr(line, '\n');
     if(p!=NULL){
       *p='\0';
@@ -28,7 +30,7 @@ return NULL;
     key=lookupValue(kvPairs,line);
     addCount(c,key);
     line=NULL;
-}
+  }
   free(line);
   fclose(f);
   return c;
