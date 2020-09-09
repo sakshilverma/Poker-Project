@@ -29,7 +29,6 @@ return NULL;
     }
     key=lookupValue(kvPairs,line);
     addCount(c,key);
-    line=NULL;
   }
   free(line);
   fclose(f);
