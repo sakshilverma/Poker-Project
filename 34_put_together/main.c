@@ -36,20 +36,23 @@ return NULL;
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
-  if(argc<2){
+  if(argc<3){
+    perror("wrong argc\n");
     return EXIT_FAILURE;
   }
   //read the key/value pairs from the file named by argv[1] (call the result kv)
   kvarray_t *kv=readKVs(argv[1]);
   if(kv==0){
+    perror("wrong kv\n");
     return EXIT_FAILURE;
   }
   //count from 2 to argc (call the number you count i)
-  for(int i=2;i<=argc;i++){
+  for(int i=2;i<argc;i++){
     //count the values that appear in the file named by argv[i], using kv as the key/value pair
     //   (call this result c)
     counts_t * c=countFile(argv[i], kv); 
     if(c==NULL){
+      perror("wrong c\n");
       return EXIT_FAILURE;
     } 
     //compute the output file name from argv[i] (call this outName)
@@ -58,12 +61,14 @@ int main(int argc, char ** argv) {
     //open the file named by outName (call that f)
     FILE *f=fopen(outName, "w");
     if(f==NULL){
+      perror("wrong f\n");
       return EXIT_FAILURE;
     }
     //print the counts from c into the FILE f
     printCounts(c, f);
     //close f
     if(fclose(f) != 0){
+      perror("unable to close f\n");
       return EXIT_FAILURE;
     }
     //free the memory for outName and c
