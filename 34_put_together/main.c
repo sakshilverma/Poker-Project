@@ -54,6 +54,7 @@ int main(int argc, char ** argv) {
     //   (call this result c)
     counts_t * c=countFile(argv[i], kv); 
     if(c==NULL){
+      freeCounts(c);
       perror("wrong c\n");
       return EXIT_FAILURE;
     } 
