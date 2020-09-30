@@ -1,34 +1,10 @@
-Grading at Wed Sep 30 15:08:55 UTC 2020
+Grading at Wed Sep 30 15:12:06 UTC 2020
 Compiling deck.c -> deck.o
-deck.c: In function ‘add_empty_card’:
-deck.c:52:26: error: invalid type argument of unary ‘*’ (have ‘card_t {aka struct card_tag}’)
-   card_t c=malloc(sizeof(*c));
-                          ^
-deck.c:53:4: error: invalid type argument of ‘->’ (have ‘card_t {aka struct card_tag}’)
-   c->value=0;
-    ^
-deck.c:54:4: error: invalid type argument of ‘->’ (have ‘card_t {aka struct card_tag}’)
-   c->suit=0;
-    ^
-deck.c:57:29: error: incompatible types when assigning to type ‘card_t * {aka struct card_tag *}’ from type ‘card_t {aka struct card_tag}’
-   deck->cards[deck->n_cards]=c;
-                             ^
-deck.c:59:10: error: incompatible types when returning type ‘card_t {aka struct card_tag}’ but ‘card_t * {aka struct card_tag *}’ was expected
-   return c;
-          ^
 deck.c: In function ‘free_deck’:
-deck.c:99:7: error: ‘i’ undeclared (first use in this function)
-   for(i=0;i<deck->n_cards;i++){
-       ^
-deck.c:99:7: note: each undeclared identifier is reported only once for each function it appears in
-deck.c:99:13: error: ‘deck’ undeclared (first use in this function)
-   for(i=0;i<deck->n_cards;i++){
-             ^
-deck.c: In function ‘add_empty_card’:
-deck.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
- }
- ^
-cc1: all warnings being treated as errors
+deck.c:99:17: error: ‘deck’ undeclared (first use in this function)
+   for(int i=0;i<deck->n_cards;i++){
+                 ^
+deck.c:99:17: note: each undeclared identifier is reported only once for each function it appears in
 Compilation of deck.c failed
 
 Overall Grade: F
