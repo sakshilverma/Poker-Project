@@ -96,7 +96,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands){
 }
 
 void free_deck(deck_t * d){
-  for(int i=0;i<deck->n_cards;i++){
+  for(int i=0;i<d->n_cards;i++){
     free(d->cards[i]);
   }
   free(d->cards);
