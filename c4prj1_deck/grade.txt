@@ -1,4 +1,4 @@
-Grading at Wed Sep 30 15:29:33 UTC 2020
+Grading at Wed Sep 30 15:30:56 UTC 2020
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
 Compiling cards.c -> cards.o
@@ -11,35 +11,35 @@ Testing add_empty_card(deck_t *)
 - Test passed
 Testing make_deck_exclude(deck_t *)
 Valgrind reported errors:
-==937== Memcheck, a memory error detector
-==937== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==937== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==937== Command: ./tester mde
-==937== Parent PID: 936
-==937== 
-==937== Conditional jump or move depends on uninitialised value(s)
-==937==    at 0x4C2FD15: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==937==    by 0x401F8F: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==937==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==937==    by 0x40372C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==937==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
-==937== 
-==937== Use of uninitialised value of size 8
-==937==    at 0x401FCD: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==937==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==937==    by 0x40372C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==937==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
-==937== 
-==937== 
-==937== HEAP SUMMARY:
-==937==     in use at exit: 0 bytes in 0 blocks
-==937==   total heap usage: 2,456 allocs, 2,456 frees, 155,328 bytes allocated
-==937== 
-==937== All heap blocks were freed -- no leaks are possible
-==937== 
-==937== For counts of detected and suppressed errors, rerun with: -v
-==937== Use --track-origins=yes to see where uninitialised values come from
-==937== ERROR SUMMARY: 1424 errors from 2 contexts (suppressed: 0 from 0)
+==1080== Memcheck, a memory error detector
+==1080== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1080== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==1080== Command: ./tester mde
+==1080== Parent PID: 1079
+==1080== 
+==1080== Conditional jump or move depends on uninitialised value(s)
+==1080==    at 0x4C2FD15: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1080==    by 0x401F8F: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==1080==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==1080==    by 0x40372C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==1080==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
+==1080== 
+==1080== Use of uninitialised value of size 8
+==1080==    at 0x401FCD: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==1080==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==1080==    by 0x40372C: check_make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==1080==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
+==1080== 
+==1080== 
+==1080== HEAP SUMMARY:
+==1080==     in use at exit: 0 bytes in 0 blocks
+==1080==   total heap usage: 2,456 allocs, 2,456 frees, 155,328 bytes allocated
+==1080== 
+==1080== All heap blocks were freed -- no leaks are possible
+==1080== 
+==1080== For counts of detected and suppressed errors, rerun with: -v
+==1080== Use --track-origins=yes to see where uninitialised values come from
+==1080== ERROR SUMMARY: 1424 errors from 2 contexts (suppressed: 0 from 0)
 Testing build_remaining_deck(deck_t **, size_t)
 Testing with 1 hand
 Testing with 2 hands
@@ -48,56 +48,56 @@ Testing with 4 hands
 Testing with 5 hands
 Testing with 6 hands
 Valgrind reported errors:
-==941== Memcheck, a memory error detector
-==941== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==941== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==941== Command: ./tester brd
-==941== Parent PID: 940
-==941== 
-==941== Conditional jump or move depends on uninitialised value(s)
-==941==    at 0x4C2FD15: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==941==    by 0x401F8F: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x4021B7: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
-==941== 
-==941== Use of uninitialised value of size 8
-==941==    at 0x401FCD: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x4021B7: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
-==941== 
-==941== Conditional jump or move depends on uninitialised value(s)
-==941==    at 0x4C2FD15: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
-==941==    by 0x401F8F: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x402216: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
-==941== 
-==941== Use of uninitialised value of size 8
-==941==    at 0x401FCD: add_card_to (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x402216: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
-==941==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
-==941== 
-==941== 
-==941== HEAP SUMMARY:
-==941==     in use at exit: 22,344 bytes in 1,890 blocks
-==941==   total heap usage: 8,845 allocs, 6,955 frees, 461,992 bytes allocated
-==941== 
-==941== LEAK SUMMARY:
-==941==    definitely lost: 7,896 bytes in 945 blocks
-==941==    indirectly lost: 14,448 bytes in 945 blocks
-==941==      possibly lost: 0 bytes in 0 blocks
-==941==    still reachable: 0 bytes in 0 blocks
-==941==         suppressed: 0 bytes in 0 blocks
-==941== Rerun with --leak-check=full to see details of leaked memory
-==941== 
-==941== For counts of detected and suppressed errors, rerun with: -v
-==941== Use --track-origins=yes to see where uninitialised values come from
-==941== ERROR SUMMARY: 4368 errors from 4 contexts (suppressed: 0 from 0)
+==1084== Memcheck, a memory error detector
+==1084== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==1084== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==1084== Command: ./tester brd
+==1084== Parent PID: 1083
+==1084== 
+==1084== Conditional jump or move depends on uninitialised value(s)
+==1084==    at 0x4C2FD15: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1084==    by 0x401F8F: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x4021B7: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
+==1084== 
+==1084== Use of uninitialised value of size 8
+==1084==    at 0x401FCD: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x4021B7: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
+==1084== 
+==1084== Conditional jump or move depends on uninitialised value(s)
+==1084==    at 0x4C2FD15: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1084==    by 0x401F8F: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x402216: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
+==1084== 
+==1084== Use of uninitialised value of size 8
+==1084==    at 0x401FCD: add_card_to (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x4020F2: make_deck_exclude (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x402216: build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x40338C: check_build_remaining_deck (in /graderhome/work/c4prj1_deck/tester)
+==1084==    by 0x400AC8: main (in /graderhome/work/c4prj1_deck/tester)
+==1084== 
+==1084== 
+==1084== HEAP SUMMARY:
+==1084==     in use at exit: 22,344 bytes in 1,890 blocks
+==1084==   total heap usage: 8,845 allocs, 6,955 frees, 461,992 bytes allocated
+==1084== 
+==1084== LEAK SUMMARY:
+==1084==    definitely lost: 7,896 bytes in 945 blocks
+==1084==    indirectly lost: 14,448 bytes in 945 blocks
+==1084==      possibly lost: 0 bytes in 0 blocks
+==1084==    still reachable: 0 bytes in 0 blocks
+==1084==         suppressed: 0 bytes in 0 blocks
+==1084== Rerun with --leak-check=full to see details of leaked memory
+==1084== 
+==1084== For counts of detected and suppressed errors, rerun with: -v
+==1084== Use --track-origins=yes to see where uninitialised values come from
+==1084== ERROR SUMMARY: 4368 errors from 4 contexts (suppressed: 0 from 0)
 Testing get_match_count(deck_t *)
 - Test passed
 
