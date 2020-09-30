@@ -190,7 +190,7 @@ unsigned * get_match_counts(deck_t * hand){
   for(size_t i=0;i<hand->n_cards;i++){
     count=0;
     for(size_t j=0;j<hand->n_cards;j++){
-      if(hand->cards[i]->value==hands->cards[j]->value){
+      if(hand->cards[i]->value==hand->cards[j]->value){
 	count++;
       }
     }
