@@ -49,7 +49,7 @@ void add_card_to(deck_t * deck, card_t c){
 }
 
 card_t * add_empty_card(deck_t * deck){
-  card_t c=malloc(sizeof(*c));
+  card_t *c=malloc(sizeof(*c));
   c->value=0;
   c->suit=0;
   //add_card_to(deck,c);
@@ -96,7 +96,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands){
 }
 
 void free_deck(deck_t * d){
-  for(i=0;i<deck->n_cards;i++){
+  for(int i=0;i<deck->n_cards;i++){
     free(d->cards[i]);
   }
   free(d->cards);
