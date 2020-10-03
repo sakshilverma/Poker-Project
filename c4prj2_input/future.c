@@ -31,6 +31,11 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
       continue;
     }
     for(size_t j=0;j<fc->decks[i].n_cards;j++){
+      if(!deck->cards||!fc->decks[i].cards)
+	{
+	  fprintf(stderr,"\nInvalid deck");
+	  exit(EXIT_FAILURE);
+	}
       fc->decks[i].cards[j]=deck->cards[i];
     }
   }
