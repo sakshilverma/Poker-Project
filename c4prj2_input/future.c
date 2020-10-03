@@ -11,6 +11,9 @@ void add_future_card(future_cards_t * fc, size_t index, card_t * ptr){
 	    fc->decks[i].cards=NULL;
 	    fc->decks[i].n_cards=0;
 	  }
+	fc->decks[index].cards=malloc(sizeof(card_t*));
+	fc->decks[index].n_cards=0;
+	fc->decks[index].cards[fc->decks[index].n_cards++]=ptr;
 	fc->n_decks=index+1;
       }
  else {
