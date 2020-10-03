@@ -36,7 +36,7 @@ void future_cards_from_deck(deck_t * deck, future_cards_t * fc){
 	  fprintf(stderr,"\nInvalid deck");
 	  exit(EXIT_FAILURE);
 	}
-      fc->decks[i].cards[j]=deck->cards[i];
-    }
+      fc->decks[i].cards[j]->value=deck->cards[i]->value;
+      fc->decks[i].cards[j]->suit=deck->cards[i]->suit;}
   }
 }
