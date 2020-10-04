@@ -20,9 +20,9 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 
 suit_t flush_suit(deck_t * hand) {
   card_t **h= hand->cards;
-  size_t n=hand->n_cards;
+  /* size_t n=hand->n_cards;
   int count=1;
-  card_t ans=NULL;
+  card_t ans;
   for(int i=0;i<n;i++)
     
     {count=1;
@@ -35,7 +35,33 @@ suit_t flush_suit(deck_t * hand) {
     if(count>=5)
       {return ans.suit;
       }
+      } */
+  int spades=0;
+  int hearts=0;
+  int diamonds=0;
+  int clubs=0;
+  for (size_t i=0; i<num; i++){
+    switch(hand->cards[i]->suit){
+    case SPADES:
+      spades++;
+      break;
+    case HEARTS:
+      hearts++;
+      break;
+    case DIAMONDS:
+      diamonds++;
+      break;
+    case CLUBS:
+      clubs++;
+      break;
+    case NUM_SUITS:
+      break;
     }
+  }
+  if (diamonds>=5) return DIAMONDS;
+  if (spades>=5) return SPADES;
+  if (clubs>=5) return CLUBS;
+  if (hearts>=5) return HEARTS;
   return NUM_SUITS;
 }
 
