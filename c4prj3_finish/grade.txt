@@ -1,18 +1,19 @@
-Grading at Sun Oct  4 19:19:18 UTC 2020
+Grading at Sun Oct  4 19:20:28 UTC 2020
 Running 'make clean' to do a clean build of your project
 rm -rf *.o poker *~
 Running 'make poker OTHERFLAGS=-O3' to build your project
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o cards.o cards.c
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o deck.o deck.c
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o eval.o eval.c
-In file included from /usr/include/_G_config.h:15:0,
-                 from /usr/include/libio.h:31,
-                 from /usr/include/stdio.h:74,
-                 from eval.c:2:
 eval.c: In function ‘flush_suit’:
-eval.c:25:14: error: invalid initializer
-   card_t ans=NULL;
-              ^
+eval.c:43:22: error: ‘num’ undeclared (first use in this function)
+   for (size_t i=0; i<num; i++){
+                      ^
+eval.c:43:22: note: each undeclared identifier is reported only once for each function it appears in
+eval.c:22:12: error: unused variable ‘h’ [-Werror=unused-variable]
+   card_t **h= hand->cards;
+            ^
+cc1: all warnings being treated as errors
 <builtin>: recipe for target 'eval.o' failed
 make: *** [eval.o] Error 1
 make failed
