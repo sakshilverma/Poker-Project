@@ -19,8 +19,9 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 }
 
 suit_t flush_suit(deck_t * hand) {
-  card_t **num= hand->cards;
-  /* size_t n=hand->n_cards;
+  size_t num=hand->n_cards;
+  /* card_t **h= hand->cards;
+  size_t n=hand->n_cards;
   int count=1;
   card_t ans;
   for(int i=0;i<n;i++)
