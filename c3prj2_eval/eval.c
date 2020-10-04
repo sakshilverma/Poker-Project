@@ -22,7 +22,7 @@ suit_t flush_suit(deck_t * hand) {
   card_t **h= hand->cards;
   size_t n=hand->n_cards;
   int count=1;
-  card_t ans=malloc(sizeof(ans));
+  card_t ans=0;
   for(int i=0;i<n;i++)
     
     {count=1;
